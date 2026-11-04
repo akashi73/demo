@@ -1,0 +1,1328 @@
+{
+  "storeInfo": {
+    "name": "Naani Pickles",
+    "hindiName": "नानी के आचार",
+    "tagline": "Dhoop, Dhaga, aur Dulaar • Traditional Indian Heirloom Pickles",
+    "established": 1964,
+    "courtyardLocation": "Varanasi & Jodhpur Courtyards",
+    "fssaiLicense": "10023051000842",
+    "contactPhone": "+91 98765 43210",
+    "contactEmail": "dulaar@naanipickles.com",
+    "activeCuringBarnis": 540,
+    "currentBatch": "Batch #92 (Autumn Sun 2026)",
+    "sunDaysElapsed": 16
+  },
+  "coupons": [
+    {
+      "code": "NAANI10",
+      "discountPercent": 10,
+      "minOrder": 399,
+      "description": "10% off on all authentic pickles"
+    },
+    {
+      "code": "PEHLIKHOJ",
+      "flatDiscount": 100,
+      "minOrder": 599,
+      "description": "Flat ₹100 off on your first order"
+    },
+    {
+      "code": "FREESHIP",
+      "freeShipping": true,
+      "minOrder": 299,
+      "description": "Free Express Pan-India Delivery"
+    },
+    {
+      "code": "DESIGHEE",
+      "discountPercent": 15,
+      "minOrder": 899,
+      "description": "15% off on orders above ₹899"
+    }
+  ],
+  "orders": [
+    {
+      "id": "NP-20855",
+      "createdAt": "2026-10-30T05:48:32.469Z",
+      "customerName": "Akhlaque Ahmad",
+      "phone": "+918806807369",
+      "email": "akhlaqueahmad12345@gmail.com",
+      "address": "kanke road, Ranchi, Jharkhand - 834008, Varanasi, Uttar Pradesh - 221001",
+      "items": [
+        {
+          "id": "custom-bundle-1793049980054",
+          "name": "Custom Heritage Dabba (4 Jars)",
+          "size": "BRASS TRUNK • 15% OFF BUNDLE",
+          "price": 854,
+          "quantity": 1
+        },
+        {
+          "id": "gongura-thokku",
+          "name": "Authentic Andhra Gongura Thokku",
+          "size": "250g Jar",
+          "price": 240,
+          "quantity": 2
+        },
+        {
+          "id": "kolhapuri-thecha",
+          "name": "Roasted Garlic Kolhapuri Thecha",
+          "size": "250g Jar",
+          "price": 220,
+          "quantity": 1
+        },
+        {
+          "id": "banarasi-lal-mirch",
+          "name": "Heirloom Bharwa Banarasi Lal Mirch",
+          "size": "1kg Heritage Ceramic Barni",
+          "price": 749,
+          "quantity": 1
+        },
+        {
+          "id": "banarasi-lal-mirch",
+          "name": "Heirloom Bharwa Banarasi Lal Mirch",
+          "size": "500g Jar (Most Loved)",
+          "price": 395,
+          "quantity": 1
+        },
+        {
+          "id": "custom-bundle-1793080303340",
+          "name": "Custom Heritage Dabba (3 Jars)",
+          "size": "WOODEN CRATE • 15% OFF BUNDLE",
+          "price": 663,
+          "quantity": 1
+        },
+        {
+          "id": "custom-bundle-1793339292272",
+          "name": "Custom Heritage Dabba (3 Jars)",
+          "size": "BRASS TRUNK • 15% OFF BUNDLE",
+          "price": 688,
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 4049,
+      "discountAmount": 0,
+      "shippingFee": 0,
+      "finalAmount": 4049,
+      "paymentMethod": "Cash on Delivery (COD)",
+      "giftMessage": null,
+      "razorpayPaymentId": null,
+      "status": "Dispatched",
+      "estimatedDelivery": "Mon, 2 Nov",
+      "trackingNumber": "BLUEDART-NP20855-IN"
+    },
+    {
+      "id": "NP-60950",
+      "createdAt": "2026-10-26T19:06:23.822Z",
+      "customerName": "akhlaque",
+      "phone": "+918806807369",
+      "email": "akhlaqueahmad12345@gmail.com",
+      "address": "kanke road, Ranchi, Jharkhand - 834008",
+      "items": [
+        {
+          "id": "ramkela-mango",
+          "name": "Grandma's Traditional Ramkela Mango Achar",
+          "size": "500g Jar (Most Loved)",
+          "price": 360,
+          "quantity": 2
+        },
+        {
+          "id": "custom-bundle-1793041489596",
+          "name": "Custom Heritage Dabba (4 Jars)",
+          "size": "BRASS TRUNK • 15% OFF BUNDLE",
+          "price": 875,
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 1595,
+      "discountAmount": 0,
+      "shippingFee": 0,
+      "finalAmount": 1595,
+      "paymentMethod": "UPI (GPay / PhonePe / Paytm)",
+      "giftMessage": null,
+      "status": "Packing in Muslin Cloth",
+      "estimatedDelivery": "Fri, 30 Oct",
+      "trackingNumber": "EXP-NP60950-IN"
+    },
+    {
+      "id": "NP-69481",
+      "createdAt": "2026-10-26T18:48:57.272Z",
+      "customerName": "Priyanka Sen",
+      "phone": "+91 99887 76655",
+      "email": "priyanka.sen@example.com",
+      "address": "B-204, Ganga View Apts, Assi Ghat, Varanasi, Uttar Pradesh - 221005",
+      "items": [
+        {
+          "price": 395,
+          "quantity": 1,
+          "name": "Heirloom Bharwa Banarasi Lal Mirch",
+          "id": "banarasi-lal-mirch",
+          "size": "500g Jar (Most Loved)"
+        }
+      ],
+      "totalAmount": 395,
+      "discountAmount": 40,
+      "shippingFee": 0,
+      "finalAmount": 355,
+      "paymentMethod": "UPI (Google Pay)",
+      "giftMessage": null,
+      "status": "Packing in Muslin Cloth",
+      "estimatedDelivery": "Fri, 30 Oct",
+      "trackingNumber": "EXP-NP69481-IN"
+    },
+    {
+      "id": "NP-84210",
+      "createdAt": "2026-10-26T13:47:56.724Z",
+      "customerName": "Aarav Sharma",
+      "phone": "+91 98234 56789",
+      "email": "aarav.sharma@example.com",
+      "address": "Flat 402, Royal Palms, Bandra West, Mumbai, Maharashtra - 400050",
+      "items": [
+        {
+          "id": "banarasi-lal-mirch",
+          "name": "Heirloom Banarasi Lal Mirch",
+          "size": "500g Jar",
+          "price": 380,
+          "quantity": 1
+        },
+        {
+          "id": "ramkela-mango",
+          "name": "Grandma's Ramkela Mango Pickle",
+          "size": "1kg Heritage Barni",
+          "price": 680,
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 1060,
+      "discountAmount": 106,
+      "shippingFee": 0,
+      "finalAmount": 954,
+      "paymentMethod": "UPI (Google Pay)",
+      "status": "Packing in Muslin Cloth",
+      "trackingNumber": "DTDC-NP84210-IN"
+    },
+    {
+      "id": "NP-84209",
+      "createdAt": "2026-10-25T20:47:56.724Z",
+      "customerName": "Pooja Venkataraman",
+      "phone": "+91 97112 34567",
+      "email": "pooja.v@example.com",
+      "address": "12, Indiranagar 100ft Road, Bengaluru, Karnataka - 560038",
+      "items": [
+        {
+          "id": "gongura-thokku",
+          "name": "Authentic Andhra Gongura Thokku",
+          "size": "250g Jar",
+          "price": 240,
+          "quantity": 2
+        },
+        {
+          "id": "kolhapuri-thecha",
+          "name": "Roasted Garlic Kolhapuri Thecha",
+          "size": "250g Jar",
+          "price": 220,
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 700,
+      "discountAmount": 70,
+      "shippingFee": 0,
+      "finalAmount": 630,
+      "paymentMethod": "Credit Card (HDFC)",
+      "status": "Dispatched",
+      "trackingNumber": "BLUEDART-NP84209-KA"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "rev-1",
+      "productId": "banarasi-lal-mirch",
+      "userName": "Meenakshi Sundaram",
+      "location": "Bengaluru",
+      "rating": 5,
+      "date": "2 days ago",
+      "comment": "The Banarasi stuffed red chili took me straight back to my grandmother's summer house in 1985. The pungency of genuine mustard oil without any sharp artificial acid is simply unmatched!",
+      "verified": true,
+      "likes": 24
+    },
+    {
+      "id": "rev-2",
+      "productId": "ramkela-mango",
+      "userName": "Vikramaditya Rathore",
+      "location": "Jaipur",
+      "rating": 5,
+      "date": "4 days ago",
+      "comment": "Ordered the 1kg Ceramic Barni. The packaging alone felt like receiving a royal gift from village elders. The crunch of Ramkela mango is sensational with parathas.",
+      "verified": true,
+      "likes": 38
+    },
+    {
+      "id": "rev-3",
+      "productId": "sweet-sour-nimbu",
+      "userName": "Dr. Ananya Mukherjee",
+      "location": "Kolkata",
+      "rating": 5,
+      "date": "1 week ago",
+      "comment": "The zero-oil sweet lemon pickle is a miracle for digestion. It has that dark, rich caramel glaze from 45 days of sun curing in Sendha namak and jaggery.",
+      "verified": true,
+      "likes": 19
+    }
+  ],
+  "subscribers": [],
+  "admin": {
+    "email": "admin@naanipickles.com",
+    "password": "admin123",
+    "name": "Chief Pickle Connoisseur",
+    "role": "superadmin"
+  },
+  "settings": {
+    "razorpay": {
+      "enabled": true,
+      "keyId": "rzp_test_NaaniPickles2026",
+      "keySecret": "w948hfskj3489hfskd",
+      "mode": "test",
+      "accountName": "Naani Pickles Heritage Foodworks",
+      "currency": "INR"
+    }
+  },
+  "users": [
+    {
+      "id": "usr-1",
+      "name": "Akhlaque Ahmad",
+      "email": "akhlaqueahmad12345@gmail.com",
+      "password": "password123",
+      "phone": "+918806807369",
+      "address": "kanke road, Ranchi, Jharkhand - 834008",
+      "createdAt": "2026-10-26T19:29:18.345Z"
+    }
+  ],
+  "products": [
+    {
+      "id": "allam-pachidi-2024",
+      "name": "Allam Pachidi",
+      "hindiName": "Adrak ka Achar",
+      "category": "Gourmet Chutneys & Podis",
+      "tagline": "Cooked ginger and jaggery and Tangy Tamrind slow coke with traditional way as naani made",
+      "description": "A Bold, Tangy & Spicy Taste of Tradition\n\nBring home the authentic taste of South Indian tradition with Naani Pickles Allam Pachadi, a flavourful ginger pickle made for those who love a perfect balance of spice, tanginess, and the distinctive warmth of fresh ginger.\n\nInspired by traditional Indian recipes, Allam Pachadi celebrates the rich, aromatic flavour of ginger blended with carefully selected spices and complementary ingredients. Every spoonful delivers a delicious combination of pungent ginger, savoury spices, and a satisfying tangy kick.",
+      "fullStory": "A Taste of Grandma’s Wisdom — The Story of Allam Pachadi\n\nLong before food came in fancy packages and recipes were found with a click, there was a grandmother in every home who knew how to turn simple ingredients into unforgettable flavours.\n\nShe knew that a little ginger could awaken a meal, that the right blend of spices could transform an ordinary dish, and that the best recipes were never just about ingredients. They were about patience, care, and the love that went into every spoonful.\n\nAllam Pachadi, the traditional ginger delicacy, carries the spirit of this timeless wisdom.\n\nIts bold ginger aroma, spicy warmth, and tangy character bring back memories of family kitchens, freshly prepared meals, and grandmothers who measured ingredients with their hearts as much as with their hands.\n\nAt Naani Pickles, we draw inspiration from this beautiful food heritage. We believe that traditional flavours deserve a place in modern homes, connecting younger generations to the tastes their grandparents cherished.\n\nEvery jar is a little reminder of where our food stories begin: at home, around the family table, with recipes worth passing on.\n\nBecause some flavours do more than delight the palate. They bring generations together.\n\nNaani Pickles — Preserving Grandma’s Legacy, One Jar at a Time.",
+      "badge": "Artisanal Batch",
+      "isBestseller": false,
+      "spiceLevel": 1,
+      "spiceText": "Medium Zing",
+      "oilBase": "Cold pressed Peanut Oil",
+      "sunDays": 1,
+      "rating": 5,
+      "reviewsCount": 1,
+      "origin": "Varanasi, Uttar Pradesh",
+      "harvestYear": "Harvest 2026",
+      "batch": "BATCH-2024",
+      "inStock": true,
+      "ingredients": [
+        "Ginger",
+        "Oil",
+        "Tamarind",
+        "Red Chilli Powder",
+        "Salt",
+        "Mustard Seeds",
+        "Fenugreek Seeds",
+        "Asafoetida (Hing)",
+        "Turmeric Powder",
+        "Curry Leaves"
+      ],
+      "tasteProfile": {
+        "tanginess": 8,
+        "spiciness": 8,
+        "crunch": 9,
+        "aroma": 9
+      },
+      "pairings": [
+        "Crisp parathas with fresh ghee"
+      ],
+      "sizes": [
+        {
+          "size": "250g Glass Jar",
+          "price": 120,
+          "originalPrice": 144,
+          "label": "Starter"
+        },
+        {
+          "size": "500g Jar (Most Loved)",
+          "price": 198,
+          "originalPrice": 234,
+          "label": "Best Value",
+          "popular": true
+        },
+        {
+          "size": "1kg Heritage Ceramic Barni",
+          "price": 372,
+          "originalPrice": 432,
+          "label": "Ceramic Barni with Muslin Tie"
+        }
+      ],
+      "image": "https://naanipickles.in/wp-content/uploads/2025/07/ChatGPT-Image-Jul-30-2025-11_05_57-PM.png"
+    },
+    {
+      "id": "banarasi-lal-mirch",
+      "name": "Heirloom Bharwa Banarasi Lal Mirch",
+      "hindiName": "भरवा बनारसी लाल मिर्च का आचार",
+      "category": "Chili & Fiery",
+      "tagline": "Sun-ripened Banarasi thick red chilies stuffed with hand-ground roasted spices",
+      "description": "Plump, sun-ripened red chilies stuffed by hand with dry-roasted fennel, fenugreek, yellow mustard, and dry mango powder. Immersed in pure cold-pressed Kachi Ghani mustard oil.",
+      "fullStory": "Every winter, grandmother would inspect individual baskets of Banarasi Lal Mirch arriving at the courtyards. Each chili is slit open, seeded, and tightly packed with our 9-spice heritage blend pounded on a basalt stone sil-batta. It matures on the haveli rooftop for 24 sunny afternoons.",
+      "badge": "Most Iconic Heirloom",
+      "isBestseller": true,
+      "spiceLevel": 3,
+      "spiceText": "Spicy & Robust",
+      "oilBase": "Kachi Ghani Mustard Oil",
+      "sunDays": 24,
+      "rating": 4.95,
+      "reviewsCount": 1420,
+      "origin": "Varanasi, Uttar Pradesh",
+      "harvestYear": "Winter Harvest 2026",
+      "batch": "BLM-Batch #91",
+      "inStock": true,
+      "ingredients": [
+        "Sun-Dried Banarasi Whole Red Chilies",
+        "Wood-Pressed Cold Mustard Oil (Kachi Ghani)",
+        "Yellow Rai (Mustard Seeds)",
+        "Dry Mango Powder (Amchur)",
+        "Nagori Roasted Saunf (Fennel)",
+        "Hathras Shahi Heeng (Asafoetida)",
+        "Rock Salt (Sendha Namak)",
+        "Kalonji (Nigella Seeds)",
+        "Roasted Fenugreek (Methi Dana)"
+      ],
+      "tasteProfile": {
+        "tanginess": 8,
+        "spiciness": 8.5,
+        "crunch": 9,
+        "aroma": 9.8
+      },
+      "pairings": [
+        "Hot triangle ajwain parathas with fresh white butter",
+        "Steaming Arhar dal, rice, and roasted papad",
+        "Chole Bhature or Poori Aloo"
+      ],
+      "sizes": [
+        {
+          "size": "250g Glass Jar",
+          "price": 230,
+          "originalPrice": 270,
+          "label": "Starter"
+        },
+        {
+          "size": "500g Jar (Most Loved)",
+          "price": 395,
+          "originalPrice": 470,
+          "label": "Best Value",
+          "popular": true
+        },
+        {
+          "size": "1kg Heritage Ceramic Barni",
+          "price": 749,
+          "originalPrice": 890,
+          "label": "Ceramic Barni with Muslin Tie"
+        }
+      ],
+      "image": "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "id": "ramkela-mango",
+      "name": "Grandma's Traditional Ramkela Mango Achar",
+      "hindiName": "असली रामकेला आम का आचार",
+      "category": "Mango Specials",
+      "tagline": "Crunchy unpeeled Ramkela raw mango chunks bathed in golden mustard oil & methi",
+      "description": "The gold standard of North Indian pickles. Hand-cut raw Ramkela mangoes sun-dried with turmeric and sendha namak, tossed in cracked mustard, methi, kalonji, and unrefined wood-pressed oil.",
+      "fullStory": "Ramkela mangoes from Uttar Pradesh are renowned for their firm, fibrous flesh that remains crunchy even after two years of curing. No peeling is ever done—the peel preserves the juicy crisp snap that pairs with every childhood memory.",
+      "badge": "Bestseller",
+      "isBestseller": true,
+      "spiceLevel": 2,
+      "spiceText": "Medium Zing",
+      "oilBase": "Kachi Ghani Mustard Oil",
+      "sunDays": 21,
+      "rating": 4.98,
+      "reviewsCount": 2840,
+      "origin": "Sambhal, Uttar Pradesh",
+      "harvestYear": "Summer 2026",
+      "batch": "RMA-Batch #88",
+      "inStock": true,
+      "ingredients": [
+        "Raw Ramkela Mangoes (with peel)",
+        "Single-Origin Cold-Pressed Mustard Oil",
+        "Turmeric (Haldi) from Salem",
+        "Cracked Yellow Mustard (Rai Kuria)",
+        "Fenugreek Seeds (Methi Dana)",
+        "Red Chili Powder",
+        "Rock Salt & Sea Salt",
+        "Pure Hathras Asafoetida"
+      ],
+      "tasteProfile": {
+        "tanginess": 9.5,
+        "spiciness": 7,
+        "crunch": 10,
+        "aroma": 9.5
+      },
+      "pairings": [
+        "Dal Khichdi loaded with cow desi ghee",
+        "Methi Thepla for train journeys",
+        "Stuffed Aloo Paratha with curd"
+      ],
+      "sizes": [
+        {
+          "size": "250g Glass Jar",
+          "price": 210,
+          "originalPrice": 250,
+          "label": "Starter"
+        },
+        {
+          "size": "500g Jar (Most Loved)",
+          "price": 360,
+          "originalPrice": 420,
+          "label": "Family Size",
+          "popular": true
+        },
+        {
+          "size": "1kg Heritage Ceramic Barni",
+          "price": 680,
+          "originalPrice": 820,
+          "label": "Ceramic Pot Collector's Jar"
+        }
+      ],
+      "image": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "id": "gujarati-aam-chunda",
+      "name": "Sun-Baked Gujarati Aam Chunda",
+      "hindiName": "पारंपरिक गुजराती खट्टा-मीठा छूंदा",
+      "category": "Mango Specials",
+      "tagline": "Fine mango shreds slowly caramelized under the summer sun with saffron & roasted cumin",
+      "description": "Finely grated raw Rajapuri mangoes blended with unrefined desi khand and sun-cured for 18 days on the roof until the sugar forms a glistening one-string amber syrup. Infused with Kashmiri saffron and roasted cumin.",
+      "fullStory": "True Chunda is NEVER cooked on a gas stove. Heat destroys the delicate floral mango aroma. Naani still ties pure white muslin cloth over broad glass vessels and lets the mid-day May sun do its slow alchemical caramelization.",
+      "badge": "100% Sun-Cooked",
+      "isBestseller": true,
+      "spiceLevel": 1,
+      "spiceText": "Mild & Sweet-Tangy",
+      "oilBase": "Zero Oil (तेल मुक्त)",
+      "sunDays": 18,
+      "rating": 4.92,
+      "reviewsCount": 1640,
+      "origin": "Valsad, Gujarat",
+      "harvestYear": "Summer 2026",
+      "batch": "GAC-Batch #74",
+      "inStock": true,
+      "ingredients": [
+        "Grated Raw Rajapuri Mangoes",
+        "Desi Khand (Unrefined Raw Cane Sugar)",
+        "Roasted Jeera (Cumin)",
+        "Kashmiri Saffron Threads (Kesar)",
+        "Black Pepper & Clove",
+        "Sendha Namak"
+      ],
+      "tasteProfile": {
+        "tanginess": 8.5,
+        "spiciness": 3,
+        "crunch": 6,
+        "aroma": 10
+      },
+      "pairings": [
+        "Crispy Gujarati Thepla & Masala Chai",
+        "Mathri & evening snacks",
+        "Cheese boards, toast, or sourdough"
+      ],
+      "sizes": [
+        {
+          "size": "250g Glass Jar",
+          "price": 220,
+          "originalPrice": 260,
+          "label": "Mini"
+        },
+        {
+          "size": "500g Jar (Most Loved)",
+          "price": 380,
+          "originalPrice": 450,
+          "label": "Most Popular",
+          "popular": true
+        },
+        {
+          "size": "1kg Heritage Ceramic Barni",
+          "price": 720,
+          "originalPrice": 850,
+          "label": "Year-Round Tub"
+        }
+      ],
+      "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "id": "sweet-sour-nimbu",
+      "name": "45-Day Sun-Cured Sweet & Tangy Lemon (Zero Oil)",
+      "hindiName": "बिना तेल का खट्टा-मीठा नींबू का आचार",
+      "category": "Citrus & Tangy",
+      "tagline": "Thin-skinned Kagzi lemons aged with black salt, ajwain, and pure jaggery",
+      "description": "Thin-skinned paper lemons hand-quartered and aged in rock salt, carom seeds (ajwain), black peppercorns, and organic dark jaggery. Absolutely 0% oil, naturally preserved by its own nectar and spice tannins.",
+      "fullStory": "This is the treasured digestive pickle that grandmothers in India have given to family members for generations. As the years pass, this achar turns deeply mahogany-black and only gets more aromatic, sweet, and soothing to the stomach.",
+      "badge": "Digestive Remedy",
+      "isBestseller": false,
+      "spiceLevel": 1,
+      "spiceText": "Tangy & Sweet Zing",
+      "oilBase": "0% Zero Oil (तेल मुक्त)",
+      "sunDays": 45,
+      "rating": 4.96,
+      "reviewsCount": 980,
+      "origin": "Nagpur, Maharashtra",
+      "harvestYear": "Autumn 2026",
+      "batch": "SSN-Batch #63",
+      "inStock": true,
+      "ingredients": [
+        "Thin-Skinned Kagzi Lemons",
+        "Organic Desi Jaggery (Gur)",
+        "Black Salt (Kala Namak)",
+        "Crushed Carom Seeds (Ajwain)",
+        "Whole Black Peppercorns",
+        "Cinnamon & Clove Infusion"
+      ],
+      "tasteProfile": {
+        "tanginess": 10,
+        "spiciness": 4,
+        "crunch": 5,
+        "aroma": 9.7
+      },
+      "pairings": [
+        "Moong Dal Khichdi during upset stomach or detox days",
+        "Plain poori or steamed basmati rice",
+        "Digestion tonic after heavy feast meals"
+      ],
+      "sizes": [
+        {
+          "size": "250g Glass Jar",
+          "price": 210,
+          "originalPrice": 240,
+          "label": "Jar"
+        },
+        {
+          "size": "500g Jar (Most Loved)",
+          "price": 360,
+          "originalPrice": 420,
+          "label": "Pantry Classic",
+          "popular": true
+        },
+        {
+          "size": "1kg Heritage Ceramic Barni",
+          "price": 670,
+          "originalPrice": 790,
+          "label": "Aged Cellar Crock"
+        }
+      ],
+      "image": "https://images.unsplash.com/photo-1590755694764-f52c17100b12?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "id": "hari-mirch-nimbu",
+      "name": "Fiery Green Chili & Crushed Yellow Mustard",
+      "hindiName": "तीखी हरी मिर्च और राई का आचार",
+      "category": "Chili & Fiery",
+      "tagline": "Crisp green chilies slit & steeped in freshly crushed pungent yellow mustard seeds",
+      "description": "Slender, spicy green chilies slit down the middle, marinated with fresh lemon juice and coarsely ground yellow rai that releases that signature nasal-clearing authentic mustard wasabi kick.",
+      "fullStory": "Whenever winter greens like Sarson ka Saag and Makki ki Roti are served, this achar is the centerpiece on the thali. Made in smaller weekly batches so the chilies remain crunchy with a fresh garden snap.",
+      "badge": "Pungent Mustard Kick",
+      "isBestseller": false,
+      "spiceLevel": 4,
+      "spiceText": "Extra Fiery & Sharp",
+      "oilBase": "Kachi Ghani Mustard Oil",
+      "sunDays": 14,
+      "rating": 4.88,
+      "reviewsCount": 820,
+      "origin": "Alwar, Rajasthan",
+      "harvestYear": "Fresh Winter 2026",
+      "batch": "HMN-Batch #104",
+      "inStock": true,
+      "ingredients": [
+        "Crisp Country Green Chilies",
+        "Cold-Pressed Mustard Oil",
+        "Coarsely Ground Yellow Rai Kuria",
+        "Freshly Squeezed Kagzi Lemon Juice",
+        "Turmeric & Sea Salt",
+        "A pinch of Hing"
+      ],
+      "tasteProfile": {
+        "tanginess": 8,
+        "spiciness": 9.8,
+        "crunch": 9.5,
+        "aroma": 9.2
+      },
+      "pairings": [
+        "Makki ki Roti and Sarson ka Saag",
+        "Poha or Upma for a spicy morning awakening",
+        "Dal Tadka and Jeera Rice"
+      ],
+      "sizes": [
+        {
+          "size": "250g Glass Jar",
+          "price": 195,
+          "originalPrice": 230,
+          "label": "Piquant"
+        },
+        {
+          "size": "500g Jar (Most Loved)",
+          "price": 340,
+          "originalPrice": 390,
+          "label": "Hot Favorite",
+          "popular": true
+        }
+      ],
+      "image": "https://images.unsplash.com/photo-1588252303782-cb80119abd6d?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "id": "rajasthani-ker-sangri",
+      "name": "Royal Rajasthani Ker Sangri & Gunda Heirloom",
+      "hindiName": "शाही राजस्थानी केर सांगरी व गुंदा आचार",
+      "category": "Heritage & Rare",
+      "tagline": "Wild desert berries & dry desert beans soaked in spiced mustard nectar",
+      "description": "An authentic Marwari royal culinary treasure. Rare wild Ker caper berries and Sangri desert beans hand-harvested from Thar desert scrub, cured with sticky wild Gunda (Lesua) berries in aromatic spices.",
+      "fullStory": "Our family hails roots from old Bikaner, where Ker Sangri was served at royal wedding banquets. Ker has a deep earthy tang, while Sangri absorbs the rich amchur and kalonji mustard oil. Sourced only once a year.",
+      "badge": "Rare Royal Heritage",
+      "isBestseller": true,
+      "spiceLevel": 2,
+      "spiceText": "Savory & Earthy",
+      "oilBase": "Kachi Ghani Mustard Oil",
+      "sunDays": 28,
+      "rating": 4.97,
+      "reviewsCount": 1110,
+      "origin": "Thar Desert, Bikaner",
+      "harvestYear": "Special Harvest 2026",
+      "batch": "RKS-Batch #49",
+      "inStock": true,
+      "ingredients": [
+        "Wild Hand-Picked Ker Berries",
+        "Desert Sangri Beans",
+        "Wild Gunda (Lesua) Fruit",
+        "Cold-Pressed Mustard Oil",
+        "Amchur (Sun-Dried Mango Powder)",
+        "Nagori Methi & Saunf",
+        "Red Mathania Chili Powder"
+      ],
+      "tasteProfile": {
+        "tanginess": 8.5,
+        "spiciness": 6.5,
+        "crunch": 8,
+        "aroma": 9.9
+      },
+      "pairings": [
+        "Bajra Roti with desi white makkhan and Jaggery",
+        "Daal Baati Churma feast",
+        "Puri and dry spiced potatoes"
+      ],
+      "sizes": [
+        {
+          "size": "250g Glass Jar",
+          "price": 295,
+          "originalPrice": 350,
+          "label": "Exclusive"
+        },
+        {
+          "size": "500g Jar (Most Loved)",
+          "price": 540,
+          "originalPrice": 620,
+          "label": "Connoisseur",
+          "popular": true
+        },
+        {
+          "size": "1kg Heritage Ceramic Barni",
+          "price": 990,
+          "originalPrice": 1180,
+          "label": "Grand Royal Barni"
+        }
+      ],
+      "image": "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "id": "andhra-avakaya",
+      "name": "Fiery Guntur Andhra Mango Avakaya",
+      "hindiName": "पारंपरिक आंध्रा स्टाइल आवकाया आम आचार",
+      "category": "Mango Specials",
+      "tagline": "Intense raw mango chunks soaked in cold-pressed sesame oil with pungent Guntur chili",
+      "description": "The pride of Telugu households. Hard, sour raw mangoes cut into perfect cubes with the inner stone shell intact to keep the kernel fragrant, drenched in freshly ground pungent mustard powder and fiery red Guntur chillies in cold-pressed sesame gingelly oil.",
+      "fullStory": "Avakaya making in our family is a day-long ritual. Grandma learned this recipe from our ancestral neighbors in Rajahmundry. The oil must always form a gentle protective ocean over the mangoes, glowing radiant ruby red.",
+      "badge": "Fiery Soul of Andhra",
+      "isBestseller": true,
+      "spiceLevel": 4,
+      "spiceText": "Volcanic & Rich",
+      "oilBase": "Cold-Pressed Sesame (Til) Oil",
+      "sunDays": 14,
+      "rating": 4.94,
+      "reviewsCount": 1730,
+      "origin": "Guntur & Godavari, Andhra",
+      "harvestYear": "Summer 2026",
+      "batch": "AA-Batch #77",
+      "inStock": true,
+      "ingredients": [
+        "Hard Sour Raw Mango Cubes with Inner Shell",
+        "Unrefined Chekku Sesame (Gingelly) Oil",
+        "Special Pounded Guntur Red Chili Powder",
+        "Coarsely Ground Mustard Seeds (Aava Pindi)",
+        "Peeled Whole Garlic Cloves (Vellulli)",
+        "Rock Salt & Fenugreek Powder"
+      ],
+      "tasteProfile": {
+        "tanginess": 9,
+        "spiciness": 10,
+        "crunch": 10,
+        "aroma": 9.7
+      },
+      "pairings": [
+        "Hot Steaming Rice with generous Cow Ghee (Neyyi)",
+        "Curd Rice on a sweltering afternoon",
+        "Upma or Dosa with coconut chutney"
+      ],
+      "sizes": [
+        {
+          "size": "250g Glass Jar",
+          "price": 230,
+          "originalPrice": 270,
+          "label": "Zesty"
+        },
+        {
+          "size": "500g Jar (Most Loved)",
+          "price": 390,
+          "originalPrice": 460,
+          "label": "Most Wanted",
+          "popular": true
+        },
+        {
+          "size": "1kg Heritage Ceramic Barni",
+          "price": 720,
+          "originalPrice": 850,
+          "label": "Barni Edition"
+        }
+      ],
+      "image": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "id": "gongura-thokku",
+      "name": "Sun-Cured Gongura Leaf Thokku",
+      "hindiName": "पारंपरिक गोंगुरा पत्ता थॊक्कु",
+      "category": "Gourmet Chutneys & Podis",
+      "tagline": "Sorrel leaves slow-roasted in cold-pressed sesame oil with roasted garlic and fenugreek",
+      "description": "The legendary Andhra sour leaf chutney. Tender red-stemmed Gongura leaves sun-dried to eliminate every drop of moisture, gently cooked in wood-pressed til oil with spluttered mustard, dry chilies, and roasted garlic cloves.",
+      "fullStory": "Gongura is celebrated for its natural electric sourness and deep iron content. Naani's thokku can sit on your dining table for months without fading in flavor or tanginess.",
+      "badge": "100% Traditional",
+      "isBestseller": false,
+      "spiceLevel": 3,
+      "spiceText": "Sour & Fiery",
+      "oilBase": "Cold-Pressed Sesame Oil",
+      "sunDays": 10,
+      "rating": 4.89,
+      "reviewsCount": 650,
+      "origin": "Tenali, Andhra Pradesh",
+      "harvestYear": "Autumn 2026",
+      "batch": "GT-Batch #52",
+      "inStock": true,
+      "ingredients": [
+        "Red-Stem Gongura Leaves (Sorrel)",
+        "Cold-Pressed Gingelly Oil",
+        "Dry Red Guntur Chilies",
+        "Roasted Garlic Pods",
+        "Tamarind Pulp",
+        "Mustard Seeds & Cumin",
+        "Rock Salt"
+      ],
+      "tasteProfile": {
+        "tanginess": 10,
+        "spiciness": 8,
+        "crunch": 4,
+        "aroma": 9.4
+      },
+      "pairings": [
+        "Hot rice, crushed papad, and a spoonful of ghee",
+        "Idli and crispy Medu Vada",
+        "Uttapam topping"
+      ],
+      "sizes": [
+        {
+          "size": "250g Glass Jar",
+          "price": 240,
+          "originalPrice": 280,
+          "label": "Classic"
+        },
+        {
+          "size": "500g Jar (Most Loved)",
+          "price": 420,
+          "originalPrice": 490,
+          "label": "Family Jar",
+          "popular": true
+        }
+      ],
+      "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "id": "kolhapuri-thecha",
+      "name": "Roasted Garlic & Peanut Kolhapuri Thecha",
+      "hindiName": "कोल्हापुरी भुना लहसुन और मूंगफली ठेचा",
+      "category": "Gourmet Chutneys & Podis",
+      "tagline": "Iron skillet roasted green chilies, garlic cloves, and crunchy roasted groundnuts",
+      "description": "The raw, rustic flavor of rural Maharashtra. Green chilies and whole garlic cloves charred over an iron griddle (tawa), coarsely hand-pounded in an iron mortar with golden roasted peanuts, sea salt, and cumin seeds.",
+      "fullStory": "No water is added during the pounding. The slight charring on the cast iron infuses a seductive smokiness that wakes up any tired palate instantly.",
+      "badge": "Smoky Skillet Char",
+      "isBestseller": true,
+      "spiceLevel": 4,
+      "spiceText": "Extra Fiery & Nutty",
+      "oilBase": "Cold-Pressed Groundnut Oil",
+      "sunDays": 0,
+      "rating": 4.93,
+      "reviewsCount": 1340,
+      "origin": "Kolhapur, Maharashtra",
+      "harvestYear": "Fresh Batch 2026",
+      "batch": "KT-Batch #115",
+      "inStock": true,
+      "ingredients": [
+        "Char-Roasted Lavangi Green Chilies",
+        "Desi Garlic Pods",
+        "Roasted Golden Peanuts",
+        "Cold-Pressed Groundnut Oil",
+        "Cumin Seeds (Jeera)",
+        "Rock Salt"
+      ],
+      "tasteProfile": {
+        "tanginess": 4,
+        "spiciness": 9.8,
+        "crunch": 8.5,
+        "aroma": 9.6
+      },
+      "pairings": [
+        "Hot Jowar or Bajra Bhakri with fresh white butter",
+        "Vada Pav or layered sandwich spread",
+        "Dal Chawal side kick"
+      ],
+      "sizes": [
+        {
+          "size": "250g Glass Jar",
+          "price": 220,
+          "originalPrice": 260,
+          "label": "Jar"
+        },
+        {
+          "size": "500g Jar (Most Loved)",
+          "price": 380,
+          "originalPrice": 440,
+          "label": "Double Jar",
+          "popular": true
+        }
+      ],
+      "image": "https://images.unsplash.com/photo-1505253758473-96b3015f21c9?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "id": "shahi-amla-murabba",
+      "name": "Sun-Matured Shahi Amla Murabba with Saffron",
+      "hindiName": "शाही आंवला मुरब्बा (केसर और इलायची)",
+      "category": "Citrus & Tangy",
+      "tagline": "Whole wild Pratapgarh Indian gooseberries soaked in honeyed saffron syrup",
+      "description": "Large, blemish-free Pratapgarh wild amlas pricked by hand, steamed and slowly steeped in cardamom, cloves, and Kashmiri saffron-infused raw sugar syrup until the gooseberry turns translucent like a jewel.",
+      "fullStory": "Naani called Amla 'Amrit Phal'. A single piece eaten every morning with a glass of warm milk is the age-old Ayurvedic secret for eyesight, digestion, hair shine, and long-lasting vitality.",
+      "badge": "Ayurvedic Rasayana",
+      "isBestseller": false,
+      "spiceLevel": 1,
+      "spiceText": "Sweet & Soothing",
+      "oilBase": "Zero Oil (तेल मुक्त)",
+      "sunDays": 30,
+      "rating": 4.96,
+      "reviewsCount": 890,
+      "origin": "Pratapgarh, Uttar Pradesh",
+      "harvestYear": "Winter Harvest 2026",
+      "batch": "SAM-Batch #41",
+      "inStock": true,
+      "ingredients": [
+        "Fresh Pratapgarh Wild Amlas (Gooseberry)",
+        "Organic Raw Sugar Syrup",
+        "Kashmiri Saffron (Kesar)",
+        "Crushed Green Cardamom (Elaichi)",
+        "Black Pepper & Cloves"
+      ],
+      "tasteProfile": {
+        "tanginess": 6,
+        "spiciness": 1,
+        "crunch": 5,
+        "aroma": 9.9
+      },
+      "pairings": [
+        "One whole piece in the morning on empty stomach",
+        "Post-meal sweet palate cleanser",
+        "With warm milk or chai"
+      ],
+      "sizes": [
+        {
+          "size": "500g Jar",
+          "price": 390,
+          "originalPrice": 460,
+          "label": "Standard Jar"
+        },
+        {
+          "size": "1kg Heritage Ceramic Barni",
+          "price": 740,
+          "originalPrice": 880,
+          "label": "Grand Glass/Barni Jar",
+          "popular": true
+        }
+      ],
+      "image": "https://images.unsplash.com/photo-1577805947697-89e18249d767?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "id": "madras-gunpowder-podi",
+      "name": "Heirloom Madras Ghee Roast Gunpowder Podi",
+      "hindiName": "मद्रास गनपाउडर पोड़ी (इ़डली-डोसा मसाला)",
+      "category": "Gourmet Chutneys & Podis",
+      "tagline": "Slow-roasted lentils, curry leaves, red chilies & hing for the ultimate ghee dunk",
+      "description": "The definitive South Indian table condiment. Chana dal, urad dal, white sesame seeds, and garden-fresh curry leaves dry-roasted to a nutty golden crisp, stone-ground with Byadgi red chilies and crystal sea salt.",
+      "fullStory": "Mix two spoonfuls of this fragrant podi with hot melted cow ghee or sesame oil, and dip your steaming hot idlis. It creates an aromatic crust that makes your kitchen smell like an authentic South Indian home.",
+      "badge": "Table Essential",
+      "isBestseller": true,
+      "spiceLevel": 2,
+      "spiceText": "Nutty & Warm Spice",
+      "oilBase": "Dry Roasted Blend (Dry Podi)",
+      "sunDays": 0,
+      "rating": 4.97,
+      "reviewsCount": 1580,
+      "origin": "Thanjavur, Tamil Nadu",
+      "harvestYear": "Fresh Ground 2026",
+      "batch": "MGP-Batch #96",
+      "inStock": true,
+      "ingredients": [
+        "Split Bengal Gram (Chana Dal)",
+        "Skinless Black Gram (Urad Dal)",
+        "Roasted White Sesame Seeds",
+        "Sun-Dried Curry Leaves",
+        "Byadgi & Guntur Dry Red Chilies",
+        "Pure Compounded Hing",
+        "Crystal Rock Salt"
+      ],
+      "tasteProfile": {
+        "tanginess": 3,
+        "spiciness": 7,
+        "crunch": 8,
+        "aroma": 10
+      },
+      "pairings": [
+        "Steaming soft idlis drenched in hot desi ghee",
+        "Crispy Ghee Roast Dosa",
+        "Sprinkled over hot buttered toast or rice"
+      ],
+      "sizes": [
+        {
+          "size": "200g Tin Container",
+          "price": 190,
+          "originalPrice": 220,
+          "label": "Tin Jar"
+        },
+        {
+          "size": "400g Refill Value Pack",
+          "price": 340,
+          "originalPrice": 399,
+          "label": "Value Pack",
+          "popular": true
+        }
+      ],
+      "image": "https://images.unsplash.com/photo-1596797038530-2c107229654b?auto=format&fit=crop&w=900&q=80"
+    },
+    {
+      "id": "heritage-trunk-hamper",
+      "name": "Naani's Heritage Brass-Finished Grand Tasting Trunk",
+      "hindiName": "नानी का शाही हेरिटेज गिफ्ट ट्रंक (4 आचार सेट)",
+      "category": "Gift Hampers",
+      "tagline": "Royal keepsake gift box with 4 signature handcrafted pickles + neem wood spoon",
+      "description": "The ultimate connoisseur gift box. Contains 4 curated signature jars: Heirloom Banarasi Lal Mirch (250g), Ramkela Mango Achar (250g), Sun-Baked Aam Chunda (250g), and 45-Day Sweet Lemon (250g). Includes a handcrafted neem wood spoon, muslin napkin, and personal wax-sealed blessing card.",
+      "fullStory": "Designed for housewarmings, Diwali, NRI homecoming gifts, and festive celebrations. Packed in an ornate reusable brass-latched keepsake trunk inspired by royal Rajasthani trousseau boxes.",
+      "badge": "Luxury Festive Gift",
+      "isBestseller": true,
+      "spiceLevel": 2,
+      "spiceText": "All Flavors (Sweet to Spicy)",
+      "oilBase": "Assorted Heritage Bases",
+      "sunDays": 30,
+      "rating": 4.99,
+      "reviewsCount": 880,
+      "origin": "Courtyards of India",
+      "harvestYear": "Festive Edition 2026",
+      "batch": "GIFT-TRUNK-2026",
+      "inStock": true,
+      "ingredients": [
+        "4 Signature Jars (250g each)",
+        "Handcrafted Neem Wood Pickle Spoon",
+        "Traditional Muslin Cover Ties",
+        "Wax-Sealed Naani Blessing Note",
+        "Luxury Keepsake Brass-Latched Trunk"
+      ],
+      "tasteProfile": {
+        "tanginess": 9,
+        "spiciness": 8,
+        "crunch": 9,
+        "aroma": 10
+      },
+      "pairings": [
+        "The perfect gift for parents, NRI relatives, and food lovers",
+        "The complete royal Indian dining table centerpiece"
+      ],
+      "sizes": [
+        {
+          "size": "Grand 4-Jar Trunk Set (1kg Total)",
+          "price": 1290,
+          "originalPrice": 1550,
+          "label": "Gift Box",
+          "popular": true
+        }
+      ],
+      "image": "https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&w=900&q=80"
+    }
+  ],
+  "blogCategories": [
+    {
+      "id": "cat-1",
+      "name": "Pickle Recipes",
+      "slug": "pickle-recipes",
+      "description": "Authentic, step-by-step heirloom pickle and chutney formulations handed down from 1964."
+    },
+    {
+      "id": "cat-2",
+      "name": "Grandma's Kitchen",
+      "slug": "grandmas-kitchen",
+      "description": "Ancestral wisdom, earthen haveli rituals, and timeless Indian culinary patience."
+    },
+    {
+      "id": "cat-3",
+      "name": "Indian Food Heritage",
+      "slug": "indian-food-heritage",
+      "description": "Deep dives into Varanasi ghats, sun curing courtyards, and forgotten traditional preservation."
+    },
+    {
+      "id": "cat-4",
+      "name": "Ingredients & Health",
+      "slug": "ingredients-and-health",
+      "description": "Ayurvedic gut benefits, cold-pressed wood-churned oils, rock salts, and digestive spices."
+    },
+    {
+      "id": "cat-5",
+      "name": "Cooking Tips",
+      "slug": "cooking-tips",
+      "description": "Crucial preservation rules, oil blanket secrets, and avoiding humidity contamination."
+    },
+    {
+      "id": "cat-6",
+      "name": "Naani Stories",
+      "slug": "naani-stories",
+      "description": "Heartwarming courtyard nostalgia, Badi Amma's laughter, and childhood monsoon memories."
+    }
+  ],
+  "blogMedia": [
+    {
+      "id": "media-1",
+      "title": "Terrace Sun Curing Barnis",
+      "url": "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=1200&q=85",
+      "alt": "Traditional ceramic barnis covered in white muslin cloth on rooftop",
+      "category": "Heritage & Courtyard",
+      "uploadedAt": "Oct 24, 2026"
+    },
+    {
+      "id": "media-2",
+      "title": "Hand-Pounded Red Chilies & Spices",
+      "url": "https://images.unsplash.com/photo-1590755694764-f52c17100b12?auto=format&fit=crop&w=1200&q=85",
+      "alt": "Whole dried red chilies, mustard seeds and spices on rustic wooden board",
+      "category": "Spices & Ingredients",
+      "uploadedAt": "Oct 24, 2026"
+    },
+    {
+      "id": "media-3",
+      "title": "Banarasi Bharwa Red Chili Pickles",
+      "url": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1200&q=85",
+      "alt": "Stuffed plump Banarasi red chili achar steeped in golden mustard oil",
+      "category": "Pickles & Jars",
+      "uploadedAt": "Oct 24, 2026"
+    },
+    {
+      "id": "media-4",
+      "title": "Kachi Ghani Mustard Oil Pour",
+      "url": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=1200&q=85",
+      "alt": "Cold-pressed golden yellow mustard oil being poured",
+      "category": "Spices & Ingredients",
+      "uploadedAt": "Oct 24, 2026"
+    },
+    {
+      "id": "media-5",
+      "title": "Ramkela Mango Slices Marinating",
+      "url": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=1200&q=85",
+      "alt": "Raw green mango cubes seasoned with turmeric and sendha namak",
+      "category": "Pickles & Jars",
+      "uploadedAt": "Oct 24, 2026"
+    },
+    {
+      "id": "media-6",
+      "title": "Traditional Indian Thali with Achar",
+      "url": "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=1200&q=85",
+      "alt": "Authentic Indian lunch thali with paratha, dal, and homemade mango pickle",
+      "category": "Serving & Thalis",
+      "uploadedAt": "Oct 24, 2026"
+    },
+    {
+      "id": "media-7",
+      "title": "Sun-Cured Sweet Lemon Kagzi Nimbu",
+      "url": "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=1200&q=85",
+      "alt": "Aged zero-oil sweet and sour lemon pickle in glass jar",
+      "category": "Pickles & Jars",
+      "uploadedAt": "Oct 24, 2026"
+    },
+    {
+      "id": "media-8",
+      "title": "Varanasi Ganges Morning Sun",
+      "url": "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=1200&q=85",
+      "alt": "Dawn sunlight reflecting over the ghats of Varanasi",
+      "category": "Heritage & Courtyard",
+      "uploadedAt": "Oct 24, 2026"
+    }
+  ],
+  "blogPosts": [
+    {
+      "id": "post-1",
+      "title": "The Lost Art of 21-Day Sun Curing in Ceramic Barnis",
+      "hindiTitle": "मिट्टी की बरनी और 21 दिनों की धूप की प्राचीन परंपरा",
+      "slug": "lost-art-of-21-day-sun-curing-ceramic-barnis",
+      "category": "Grandma's Kitchen",
+      "tags": [
+        "Sun Curing",
+        "Ceramic Barnis",
+        "Ancient Wisdom",
+        "Slow Food"
+      ],
+      "author": "Grandmother Shanti Devi",
+      "authorRole": "Head Recipe Curator • Estd. 1964",
+      "authorImage": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80",
+      "excerpt": "Why modern quick-pickling destroys the soul of achar, and how 21 days of rooftop sun-basking in clay barnis creates unmatched probiotic richness and longevity.",
+      "content": "## Why Real Pickling Can Never Be Rushed\n\nIn our ancestral haveli overlooking the holy river Ganges, early morning between October and March was always marked by a singular sacred ritual: the rooftop migration of our ceramic *barnis* (मिट्टी की बरनी).\n\nWhile modern commercial brands produce vinegar-steeped \"pickles\" in stainless steel vats within 48 hours using artificial heating and chemical stabilizers, true Indian *achar* is a living, solar-powered alchemy.\n\n---\n\n### The Secret of Glazed Clay (Micro-Aeration Without Light)\n\nHave you ever wondered why our grandmothers insisted on heavy white-and-brown ceramic jars instead of convenient glass or plastic?\n\n- **Zero Light Degradation**: Direct sunlight breaks down delicate essential oils in yellow mustard (*rai*) and fenugreek (*methi*). The dense clay wall blocks 100% of UV rays.\n- **Natural Micro-Aeration**: Glazed pottery breathes infinitesimally through microscopic pores, maintaining a steady osmotic pressure without allowing airborne mold spores in.\n- **Temperature Buffering**: Clay cools down gently at night and warms up slowly during the day, preventing sudden thermal shock that separates oil from fruit fibers.\n\n> \"Achar is not cooked over fire; it is gently ripened by Lord Surya. Every sunrise brings a new layer of aroma.\"\n> — *Badi Amma, Varanasi, 1964*\n\n---\n\n### The 21-Day Solar Journey: Step-by-Step\n\n1. **Days 1 to 5 (Salt Water Drawdown & Osmosis)**: Raw mango chunks or slit chilies are seasoned with Sendha salt and turmeric. Salt draws out moisture, turning the vegetable cell walls tender yet crisp.\n2. **Days 6 to 12 (The Spiced Oil Infusion)**: Hand-pounded spices—coarse *saunf*, roasted *kalonji*, yellow mustard, and asafoetida—are folded into pure cold-pressed Kachi Ghani mustard oil.\n3. **Days 13 to 21 (Enzymatic Mellowing)**: Covered in breathable bleached cotton muslin (*malmal ka dhaga*), the jars absorb exactly 6 to 7 hours of direct afternoon sun daily. Volatile mustard compounds (*allyl isothiocyanate*) mellow from sharp bite into rich, warm pungency.\n\n---\n\n### Modern Preservation vs. Heritage Patience\n\n| Quality | Factory Vinegar Pickle | Naani's 21-Day Sun Cured |\n| :--- | :--- | :--- |\n| **Preservative** | Sodium Benzoate / Acetic Acid | Cold-Pressed Mustard Oil & Rock Salt |\n| **Aging Vessel** | Plastic or Industrial Metal | Traditional Glazed Ceramic Barni |\n| **Texture** | Soft, soggy, artificial bite | Firm crunch that lasts 3+ years |\n| **Gut Health** | High synthetic acid | Natural Ayurvedic probiotic flora |\n\n---\n\n### Bringing The Courtyard to Your Dining Table\n\nWhen you unscrew a jar of Naani Pickles today, inhale deeply. That sharp, appetizing aroma isn't artificial flavoring—it is the captured warmth of 21 sunny afternoons along the banks of the Ganges.",
+      "featuredImage": "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=1200&q=85",
+      "readTime": "6 min read",
+      "status": "published",
+      "isFeatured": true,
+      "views": 2482,
+      "likes": 413,
+      "createdAt": "2026-10-24T08:00:00Z",
+      "publishedAt": "October 24, 2026"
+    },
+    {
+      "id": "post-2",
+      "title": "Why Wood-Pressed Kachi Ghani Mustard Oil Is The Soul of Indian Pickles",
+      "hindiTitle": "कच्ची घानी सरसों का तेल: भारतीय आचार की आत्मा",
+      "slug": "wood-pressed-kachi-ghani-mustard-oil-benefits",
+      "category": "Ingredients & Health",
+      "tags": [
+        "Kachi Ghani",
+        "Mustard Oil",
+        "Ayurveda",
+        "Cold Pressed"
+      ],
+      "author": "Kitchen Herbalist Devika",
+      "authorRole": "Ayurvedic Food Researcher",
+      "authorImage": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
+      "excerpt": "Discover why refined oils fail in traditional preservation and how wooden Kohlu-pressed mustard oil creates an impermeable antibacterial shield for your pickles.",
+      "content": "## The Liquid Gold of Ancient Kitchens\n\nWalk into any grandmother's kitchen across northern or eastern India during pickle season, and the pungent, nasal-clearing fragrance of mustard oil is unmistakable. But why has yellow mustard oil been India's quintessential preservation medium for over 2,000 years?\n\n---\n\n### The Disaster of Refined Palm Oil\n\nIndustrial food corporations use ultra-refined palm and cottonseed oil because it is cheap and neutral in scent. However, refined oil:\n- Is extracted using petroleum solvents like hexane at 200°C temperatures.\n- Destroys all natural tocopherols (Vitamin E) and antioxidants.\n- Fails to inhibit anaerobic bacteria, forcing companies to inject chemical preservatives like potassium metabisulfite.\n\n---\n\n### The Miracle of Wood-Churned (Kohlu) Extraction\n\nAt Naani Pickles, we insist on single-origin black and yellow mustard seeds cold-pressed in traditional wooden rotators (लकड़ी का कोहलू) running at less than 18 RPM:\n\n1. **Natural Antimicrobial Power**: Mustard oil contains *allyl isothiocyanate*, a compound so naturally antibacterial that zero pathogens can survive beneath its surface.\n2. **The \"Oil Blanket\" Mechanism**: Mustard oil has a lower specific gravity and high viscosity. It settles atop fruits, forming a suffocating oxygen barrier that prevents fungal spores from taking root.\n3. **Ayurvedic Digestive Ignition**: In Charaka Samhita, mustard oil is described as *Deepana* (kindler of digestive fire) and *Kapha-Vata Shamaka*.\n\n> \"If the oil doesn't make your eyes tear slightly when warmed in the sun, it isn't real Kachi Ghani.\"\n> — *Grandmother Shanti Devi*\n\n---\n\n### How to Check Pure Mustard Oil at Home\n\n- **The Chilling Test**: Place a small glass of oil in the refrigerator for 2 hours. Pure mustard oil will remain completely fluid; adulterated palm oil will turn white and solidify.\n- **The Color Profile**: Genuine cold-pressed oil carries a deep amber-gold hue with reddish undertones, never pale straw yellow.",
+      "featuredImage": "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=1200&q=85",
+      "readTime": "5 min read",
+      "status": "published",
+      "isFeatured": false,
+      "views": 1840,
+      "likes": 295,
+      "createdAt": "2026-10-22T10:00:00Z",
+      "publishedAt": "October 22, 2026"
+    },
+    {
+      "id": "post-3",
+      "title": "Heirloom Bharwa Banarasi Lal Mirch: The 1964 Rooftop Secret",
+      "hindiTitle": "भरवा बनारसी लाल मिर्च का आचार: 1964 की गुप्त रेसिपी",
+      "slug": "heirloom-bharwa-banarasi-lal-mirch-recipe",
+      "category": "Pickle Recipes",
+      "tags": [
+        "Banarasi Lal Mirch",
+        "Stuffed Chili",
+        "Varanasi Heritage"
+      ],
+      "author": "Grandmother Shanti Devi",
+      "authorRole": "Head Recipe Curator • Estd. 1964",
+      "authorImage": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80",
+      "excerpt": "A look into the labor of love behind stuffing plump Banarasi winter red chilies with stone-ground fennel, amchur, and spiced mustard stuffing.",
+      "content": "## The Crown Jewel of Uttar Pradesh\n\nNo culinary creation evokes winter nostalgia quite like the fat, glistening, ruby-red Banarasi Lal Mirch (बनारसी लाल मिर्च). With its thick fleshy skin and hollow seed core, this heritage winter variety from the fertile silt soils of Mirzapur and Varanasi was practically born to be stuffed.\n\n---\n\n### Ingredients of The 1964 Masala Blend\n\n- **Fennel Seeds (सौंफ)**: Roasted dry on iron skillets until nutty and sweet.\n- **Yellow Mustard Kuria (राई दाल)**: Coarsely cracked, releasing pungent sulfur oils.\n- **Wild Mango Powder (देसी अमचूर)**: Sun-dried raw green Ramkela mangoes crushed on basalt stone.\n- **Kalonji (Nigella)** & **Ajwain**: For digestion and earthy bitterness.\n- **Black Salt (काला नमक)** & **Sendha Namak**: Pure mineral balance.\n- **Heerasaad Asafoetida (कड़क हींग)**: Sourced from royal Hathras traders.\n\n---\n\n### The Art of Hand-Stuffing\n\n1. **Sun-Wilted Skin**: Freshly picked chilies are wiped clean with a dry cotton cloth and left in the mild morning sun for 4 hours. This makes the skin pliable so it never tears during stuffing.\n2. **De-Coring**: Using a small brass spatula, the crown is sliced and interior seeds gently tapped out.\n3. **The Tight Stuffing**: The masala paste is blended with lukewarm mustard oil until it resembles damp sand. It is packed into the chili using fingertips—neither too loose, nor too packed to burst.\n4. **The Sun Bath**: Packed tightly into ceramic barnis, they are topped with cold-pressed oil and sun-basked for 24 uninterrupted days.\n\n> \"A single piece of Bharwa Mirch can turn a humble bowl of Arhar dal and hot rice into a king's banquet.\"",
+      "featuredImage": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=1200&q=85",
+      "readTime": "8 min read",
+      "status": "published",
+      "isFeatured": false,
+      "views": 3120,
+      "likes": 540,
+      "createdAt": "2026-10-20T14:30:00Z",
+      "publishedAt": "October 20, 2026"
+    },
+    {
+      "id": "post-4",
+      "title": "The Science Behind Zero-Oil Nimbu Achar: How Sunlight and Salt Preserve for 10+ Years",
+      "hindiTitle": "बिना तेल का खट्टा-मीठा नींबू का आचार: विज्ञान और औषधीय लाभ",
+      "slug": "science-behind-zero-oil-lemon-achar",
+      "category": "Indian Food Heritage",
+      "tags": [
+        "Zero Oil",
+        "Kagzi Lemon",
+        "Natural Fermentation"
+      ],
+      "author": "Kitchen Herbalist Devika",
+      "authorRole": "Ayurvedic Food Researcher",
+      "authorImage": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
+      "excerpt": "How a pickle made with 0% oil and 0% synthetic vinegar stays preserved for decades, turning into a treasured black Ayurvedic digestive medicine.",
+      "content": "## The Miracle of Ancient Digestive Alchemy\n\nMost people believe oil is mandatory for pickle preservation. Yet one of India's most celebrated heirloom preparations—*Khatta Meetha Kagzi Nimbu Achar*—contains absolutely zero drops of oil.\n\nEven more astonishing: this pickle doesn't just last for 12 months; grandmothers across India proudly serve jars aged for 10, 15, and even 25 years!\n\n---\n\n### How Does It Survive Without Oil?\n\n1. **Citric Acid Antiseptic Power**: Paper-thin Kagzi lemons have a natural pH between 2.0 and 2.4. At this acidity level, spoilage bacteria cannot multiply.\n2. **Rock Salt Water Activity Reduction**: Sendha salt draws lemon juices into a hypertonic brine, dehydrating any microbe that enters.\n3. **Enzymatic Caramelization**: Over years of terrace sun-basking, natural sugars in organic jaggery and lemon peel slowly oxidize, turning the pickle from sunny yellow into a deep molasses-black tincture with the complexity of aged balsamic vinegar.\n\n---\n\n### Ayurvedic Medicine in Every Spoon\n\n- **Instant Relief from Indigestion & Bloating**: Carom seeds (*ajwain*) and black salt stimulate gastric enzyme secretion (*Pachaka Pitta*).\n- **Zero Cholesterol & Heart Healthy**: 100% fat-free, making it the perfect dietary accompaniment for seniors and health-conscious eaters.\n- **Natural Detoxification**: Helps balance bodily electrolytes after illness or fasting.",
+      "featuredImage": "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=1200&q=85",
+      "readTime": "6 min read",
+      "status": "published",
+      "isFeatured": false,
+      "views": 1960,
+      "likes": 310,
+      "createdAt": "2026-10-18T11:15:00Z",
+      "publishedAt": "October 18, 2026"
+    },
+    {
+      "id": "post-5",
+      "title": "Why You Must Never Dip a Wet Spoon: Grandma's 5 Commandments of Achar Preservation",
+      "hindiTitle": "सूखा चम्मच और तेल का पहरा: आचार को सालों साल सुरक्षित रखने के 5 नियम",
+      "slug": "grandmas-5-commandments-of-achar-preservation",
+      "category": "Cooking Tips",
+      "tags": [
+        "Preservation",
+        "Kitchen Hacks",
+        "Shelf Life"
+      ],
+      "author": "Grandmother Shanti Devi",
+      "authorRole": "Head Recipe Curator • Estd. 1964",
+      "authorImage": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80",
+      "excerpt": "Everything you need to know about preserving traditional small-batch pickles at home without refrigeration or chemical stabilizers.",
+      "content": "## A Treasured Jar Deserves Sacred Respect\n\nYou received your artisanal jar of Naani Pickles, packed with 60-year-old grandmother love. But because our products contain zero artificial preservatives or synthetic vinegars, their shelf life in your kitchen depends on following 5 timeless courtyard rules.\n\n---\n\n### 1. The Bone-Dry Spoon Rule (सूखा चम्मच नियम)\nWater is the eternal enemy of sun-cured pickles. Even a single droplet of moisture from a washed spoon introduces mold spores (*Aspergillus*).\n*Always use a bone-dry wooden, ceramic, or stainless steel spoon.*\n\n### 2. Keep The Oil Blanket Intact (तेल का पहरा)\nWhenever you scoop out pickle chunks, use the back of your spoon to gently press remaining pieces beneath the surface of the oil. The fruit should always be submerged under at least a 1/4-inch golden oil blanket.\n\n### 3. Shady Pantry, Never The Refrigerator! (फ्रिज से दूर)\nRefrigeration solidifies healthy mustard oils, dulls the fragrance of whole spices, and triggers internal condensation inside the jar lid. Keep your barni in a cool, ventilated pantry corner.\n\n### 4. The Gentle Weekly Swirl (साप्ताहिक घुमाव)\nOnce a week, gently swirl or tilt your jar so that the spice-infused oil recirculates over the topmost pieces, re-coating every morsel in natural antimicrobial tannins.\n\n### 5. The Monsoon Sun Bath (बरसात में धूप)\nIf you reside in humid coastal cities like Mumbai, Chennai, or Kolkata, give your sealed jar 2 to 3 hours of bright morning sun once a month during the rainy season.",
+      "featuredImage": "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=1200&q=85",
+      "readTime": "4 min read",
+      "status": "published",
+      "isFeatured": false,
+      "views": 1420,
+      "likes": 245,
+      "createdAt": "2026-10-15T09:00:00Z",
+      "publishedAt": "October 15, 2026"
+    },
+    {
+      "id": "post-6",
+      "title": "Tales from a 1964 Varanasi Haveli: How Badi Amma Started with Three Clay Barnis",
+      "hindiTitle": "1964 की एक बनारसी हवेली की दास्तान: तीन बरनियों से शुरू हुआ सफर",
+      "slug": "tales-from-1964-varanasi-haveli-badi-amma",
+      "category": "Naani Stories",
+      "tags": [
+        "Badi Amma",
+        "Varanasi Haveli",
+        "Nostalgia",
+        "Origin Story"
+      ],
+      "author": "Rohan & Priyanshi Sharma",
+      "authorRole": "3rd Generation Founders",
+      "authorImage": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
+      "excerpt": "The heartwarming founding story of Naani Pickles: from rooftop clay jars gifted to departing train travelers at Varanasi junction to homes across India.",
+      "content": "## A Haveli Along The Ganges\n\nIn the winter of 1964, in an ancestral haveli nestled within the winding stone alleys of Varanasi, grandmother Shanti Devi (whom we all called *Badi Amma*) was preparing her seasonal batch of Bharwa Lal Mirch and Ramkela Aam Achar.\n\nWhenever cousins or neighbors traveled back to Delhi, Kolkata, or London by train from Varanasi Junction, Badi Amma would wrap a small clay barni in a clean cotton cloth, knot it with jute twine, and place it in their luggage.\n\n> \"Take this with you. In unfamiliar cities where you miss home, a spoonful of this will remind you of where you came from.\"\n\n---\n\n### The Lost Flavor of Real Homes\n\nOver decades, as supermarket shelves filled with mass-manufactured jars loaded with preservatives and vinegar, family members kept asking: *Why can't we buy achar like Badi Amma made?*\n\nThat single question sparked Naani Pickles. We made a pledge:\n- We will never substitute cold-pressed mustard oil with palm oil.\n- We will never speed up the 21-day sun curing process with electric ovens.\n- We will never use plastic packaging.\n\nToday, every jar that leaves our kitchen carries that exact same blessing from 1964.",
+      "featuredImage": "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=1200&q=85",
+      "readTime": "7 min read",
+      "status": "published",
+      "isFeatured": false,
+      "views": 2890,
+      "likes": 475,
+      "createdAt": "2026-10-12T16:00:00Z",
+      "publishedAt": "October 12, 2026"
+    }
+  ]
+}

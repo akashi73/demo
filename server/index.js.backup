@@ -1,0 +1,1058 @@
+const express = require('express');
+const cors = require('cors');
+const fs = require('fs');
+const path = require('path');
+
+const app = express();
+const PORT = process.env.PORT || 5000;
+const DATA_FILE = path.join(__dirname, 'data.json');
+
+app.use(cors());
+app.use(express.json());
+
+// Helper functions for reading & writing database
+function readData() {
+  try {
+    const raw = fs.readFileSync(DATA_FILE, 'utf8');
+    return JSON.parse(raw);
+  } catch (err) {
+    console.error('Error reading data:', err);
+    return { categories: [], users: [], jobs: [], applications: [], messages: [] };
+  }
+}
+
+function writeData(data) {
+  try {
+    fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2), 'utf8');
+    return true;
+  } catch (err) {
+    console.error('Error writing data:', err);
+    return false;
+  }
+}
+
+// ================= STATS & META =================
+app.get('/api/stats', (req, res) => {
+  const data = readData();
+  const candidates = data.users.filter(u => u.role === 'candidate');
+  const hrUsers = data.users.filter(u => u.role === 'hr');
+  const activeJobs = data.jobs.length;
+  const hiredCount = data.applications.filter(a => a.status === 'Hired').length;
+  
+  res.json({
+    totalJobs: activeJobs,
+    totalCandidates: candidates.length,
+    totalRecruiters: hrUsers.length,
+    totalHires: hiredCount + 48, // platform baseline
+    categoriesCount: data.categories.length
+  });
+});
+
+app.get('/api/categories', (req, res) => {
+  const data = readData();
+  res.json(data.categories);
+});
+
+// ================= JOBS =================
+app.get('/api/jobs', (req, res) => {
+  const data = readData();
+  const { category, search, location, jobType, urgent, minExp, companyId } = req.query;
+  
+  let filtered = [...data.jobs];
+
+  if (category && category !== 'all') {
+    filtered = filtered.filter(j => 
+      j.category.toLowerCase().includes(category.toLowerCase())
+    );
+  }
+
+  if (companyId) {
+    filtered = filtered.filter(j => j.companyId === companyId);
+  }
+
+  if (jobType && jobType !== 'all') {
+    filtered = filtered.filter(j => j.jobType.toLowerCase() === jobType.toLowerCase());
+  }
+
+  if (urgent === 'true') {
+    filtered = filtered.filter(j => j.urgent);
+  }
+
+  if (location) {
+    const locLower = location.toLowerCase();
+    filtered = filtered.filter(j => 
+      j.location.toLowerCase().includes(locLower) || 
+      (j.area && j.area.toLowerCase().includes(locLower))
+    );
+  }
+
+  if (search) {
+    const sLower = search.toLowerCase();
+    filtered = filtered.filter(j => 
+      j.title.toLowerCase().includes(sLower) ||
+      j.company.toLowerCase().includes(sLower) ||
+      j.description.toLowerCase().includes(sLower) ||
+      (j.skills && j.skills.some(sk => sk.toLowerCase().includes(sLower)))
+    );
+  }
+
+  if (minExp) {
+    const exp = parseInt(minExp, 10);
+    if (!isNaN(exp)) {
+      filtered = filtered.filter(j => j.minExp <= exp);
+    }
+  }
+
+  res.json(filtered);
+});
+
+app.get('/api/jobs/:id', (req, res) => {
+  const data = readData();
+  const job = data.jobs.find(j => j.id === req.params.id);
+  if (!job) return res.status(404).json({ error: 'Job not found' });
+  
+  // Attach company details if available
+  const recruiter = data.users.find(u => u.id === job.companyId);
+  res.json({ ...job, recruiter });
+});
+
+app.post('/api/jobs', (req, res) => {
+  const data = readData();
+  const {
+    title,
+    company,
+    companyId,
+    category,
+    location,
+    area,
+    jobType = 'Full Time',
+    workMode = 'On-site',
+    minExp = 0,
+    maxExp = 3,
+    salaryMin,
+    salaryMax,
+    openings = 1,
+    urgent = false,
+    description,
+    skills = [],
+    benefits = []
+  } = req.body;
+
+  if (!title || !company || !category || !location) {
+    return res.status(400).json({ error: 'Please provide all required job fields' });
+  }
+
+  const newJob = {
+    id: `job-${Date.now()}`,
+    title,
+    company,
+    companyId: companyId || 'user-hr-1',
+    logo: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=150&auto=format&fit=crop&q=80',
+    category,
+    location,
+    area: area || location,
+    jobType,
+    workMode,
+    minExp: Number(minExp),
+    maxExp: Number(maxExp),
+    salaryMin: Number(salaryMin) || 20000,
+    salaryMax: Number(salaryMax) || 30000,
+    salaryDisplay: `₹${Number(salaryMin || 20000).toLocaleString('en-IN')} - ₹${Number(salaryMax || 30000).toLocaleString('en-IN')} / month`,
+    openings: Number(openings),
+    urgent: Boolean(urgent),
+    verified: true,
+    postedDate: new Date().toISOString().split('T')[0],
+    description,
+    skills: Array.isArray(skills) ? skills : skills.split(',').map(s => s.trim()).filter(Boolean),
+    benefits: Array.isArray(benefits) ? benefits : benefits.split(',').map(b => b.trim()).filter(Boolean),
+    applicantsCount: 0
+  };
+
+  data.jobs.unshift(newJob);
+  writeData(data);
+  res.status(201).json(newJob);
+});
+
+app.delete('/api/jobs/:id', (req, res) => {
+  const data = readData();
+  const index = data.jobs.findIndex(j => j.id === req.params.id);
+  if (index === -1) return res.status(404).json({ error: 'Job not found' });
+  
+  data.jobs.splice(index, 1);
+  writeData(data);
+  res.json({ success: true, message: 'Job deleted successfully' });
+});
+
+// ================= CANDIDATES (TALENT DIRECTORY / RESDEX) =================
+app.get('/api/candidates', (req, res) => {
+  const data = readData();
+  const { category, search, location, minExp, availability, verifiedOnly } = req.query;
+
+  let candidates = data.users.filter(u => u.role === 'candidate');
+
+  if (category && category !== 'all') {
+    candidates = candidates.filter(c => 
+      c.category && c.category.toLowerCase().includes(category.toLowerCase())
+    );
+  }
+
+  if (location) {
+    const locLower = location.toLowerCase();
+    candidates = candidates.filter(c => 
+      c.location && c.location.toLowerCase().includes(locLower)
+    );
+  }
+
+  if (availability && availability !== 'all') {
+    candidates = candidates.filter(c => 
+      c.availability && c.availability.toLowerCase().includes(availability.toLowerCase())
+    );
+  }
+
+  if (verifiedOnly === 'true') {
+    candidates = candidates.filter(c => c.verified);
+  }
+
+  if (search) {
+    const sLower = search.toLowerCase();
+    candidates = candidates.filter(c => 
+      c.name.toLowerCase().includes(sLower) ||
+      (c.title && c.title.toLowerCase().includes(sLower)) ||
+      (c.skills && c.skills.some(sk => sk.toLowerCase().includes(sLower))) ||
+      (c.bio && c.bio.toLowerCase().includes(sLower))
+    );
+  }
+
+  if (minExp) {
+    const exp = parseFloat(minExp);
+    if (!isNaN(exp)) {
+      candidates = candidates.filter(c => (c.experienceYears || 0) >= exp);
+    }
+  }
+
+  res.json(candidates);
+});
+
+app.get('/api/candidates/:id', (req, res) => {
+  const data = readData();
+  const candidate = data.users.find(u => u.id === req.params.id && u.role === 'candidate');
+  if (!candidate) return res.status(404).json({ error: 'Candidate not found' });
+  res.json(candidate);
+});
+
+app.post('/api/candidates', (req, res) => {
+  const data = readData();
+  const {
+    name,
+    email,
+    phone,
+    title,
+    category,
+    location,
+    locality,
+    experience = '1 Year',
+    experienceYears = 1,
+    expectedSalary = '₹20,000 / month',
+    salaryNumber = 20000,
+    availability = 'Immediately Available',
+    shift = 'Full-time Day Shift',
+    education,
+    skills = [],
+    bio
+  } = req.body;
+
+  if (!name || !phone || !category) {
+    return res.status(400).json({ error: 'Name, phone, and primary skill category are required' });
+  }
+
+  // Parse skills if string
+  const parsedSkills = Array.isArray(skills) 
+    ? skills 
+    : String(skills).split(',').map(s => s.trim()).filter(Boolean);
+
+  const newCandidate = {
+    id: `user-cand-${Date.now()}`,
+    role: 'candidate',
+    name,
+    email: email || `${name.toLowerCase().replace(/\s+/g, '.')}${Date.now() % 1000}@skillconnect.in`,
+    phone,
+    title: title || `${category} Specialist`,
+    category,
+    location: location || 'Mumbai, Maharashtra',
+    locality: locality || '',
+    experience,
+    experienceYears: Number(experienceYears) || 1,
+    expectedSalary,
+    salaryNumber: Number(salaryNumber) || 20000,
+    availability,
+    shift,
+    education: education || 'High School / Vocational Training',
+    skills: parsedSkills.length > 0 ? parsedSkills : ['General Skills'],
+    verified: true,
+    rating: 5.0,
+    reviewsCount: 1,
+    avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80',
+    bio: bio || `Dedicated and reliable professional with experience in ${category}. Ready to join immediately.`,
+    appliedJobIds: [],
+    savedJobIds: []
+  };
+
+  data.users.push(newCandidate);
+  writeData(data);
+  res.status(201).json(newCandidate);
+});
+
+app.put('/api/candidates/:id', (req, res) => {
+  const data = readData();
+  const index = data.users.findIndex(u => u.id === req.params.id);
+  if (index === -1) return res.status(404).json({ error: 'Candidate not found' });
+
+  data.users[index] = { ...data.users[index], ...req.body };
+  writeData(data);
+  res.json(data.users[index]);
+});
+
+// ================= APPLICATIONS & ATS PIPELINE =================
+app.get('/api/applications', (req, res) => {
+  const data = readData();
+  const { candidateId, jobId, hrCompanyId } = req.query;
+
+  let apps = [...data.applications];
+
+  if (candidateId) {
+    apps = apps.filter(a => a.candidateId === candidateId);
+  }
+
+  if (jobId) {
+    apps = apps.filter(a => a.jobId === jobId);
+  }
+
+  // Enrich each application with job & candidate details
+  const enriched = apps.map(app => {
+    const job = data.jobs.find(j => j.id === app.jobId);
+    const candidate = data.users.find(u => u.id === app.candidateId);
+    return {
+      ...app,
+      jobTitle: job ? job.title : 'Job',
+      company: job ? job.company : 'Company',
+      companyLogo: job ? job.logo : '',
+      jobLocation: job ? job.location : '',
+      salaryDisplay: job ? job.salaryDisplay : '',
+      candidateName: candidate ? candidate.name : 'Applicant',
+      candidatePhone: candidate ? candidate.phone : '',
+      candidateEmail: candidate ? candidate.email : '',
+      candidateExperience: candidate ? candidate.experience : '',
+      candidateSkills: candidate ? candidate.skills : [],
+      candidateAvatar: candidate ? candidate.avatar : '',
+      candidateExpectedSalary: candidate ? candidate.expectedSalary : '',
+      companyId: job ? job.companyId : ''
+    };
+  });
+
+  if (hrCompanyId) {
+    const hrFiltered = enriched.filter(a => a.companyId === hrCompanyId);
+    return res.json(hrFiltered);
+  }
+
+  res.json(enriched);
+});
+
+app.post('/api/applications', (req, res) => {
+  const data = readData();
+  const { jobId, candidateId, coverNote } = req.body;
+
+  if (!jobId || !candidateId) {
+    return res.status(400).json({ error: 'jobId and candidateId are required' });
+  }
+
+  // Check if already applied
+  const existing = data.applications.find(a => a.jobId === jobId && a.candidateId === candidateId);
+  if (existing) {
+    return res.status(400).json({ error: 'You have already applied for this position' });
+  }
+
+  const newApp = {
+    id: `app-${Date.now()}`,
+    jobId,
+    candidateId,
+    appliedAt: new Date().toISOString(),
+    status: 'Applied',
+    recruiterNotes: coverNote ? `Applicant Note: "${coverNote}"` : 'Applied via SkillConnect Instant Apply'
+  };
+
+  data.applications.push(newApp);
+
+  // Update candidate appliedJobIds
+  const cand = data.users.find(u => u.id === candidateId);
+  if (cand) {
+    if (!cand.appliedJobIds) cand.appliedJobIds = [];
+    if (!cand.appliedJobIds.includes(jobId)) cand.appliedJobIds.push(jobId);
+  }
+
+  // Increment job applicant count
+  const job = data.jobs.find(j => j.id === jobId);
+  if (job) {
+    job.applicantsCount = (job.applicantsCount || 0) + 1;
+  }
+
+  writeData(data);
+  res.status(201).json(newApp);
+});
+
+app.put('/api/applications/:id', (req, res) => {
+  const data = readData();
+  const index = data.applications.findIndex(a => a.id === req.params.id);
+  if (index === -1) return res.status(404).json({ error: 'Application not found' });
+
+  const { status, recruiterNotes, interviewDate, interviewLocation } = req.body;
+
+  if (status) data.applications[index].status = status;
+  if (recruiterNotes !== undefined) data.applications[index].recruiterNotes = recruiterNotes;
+  if (interviewDate !== undefined) data.applications[index].interviewDate = interviewDate;
+  if (interviewLocation !== undefined) data.applications[index].interviewLocation = interviewLocation;
+
+  writeData(data);
+  res.json(data.applications[index]);
+});
+
+// ================= MESSAGES / CHAT =================
+app.get('/api/messages', (req, res) => {
+  const data = readData();
+  const { userId, otherUserId } = req.query;
+
+  if (!userId) return res.json(data.messages);
+
+  let userMsgs = data.messages.filter(m => 
+    m.senderId === userId || m.receiverId === userId
+  );
+
+  if (otherUserId) {
+    userMsgs = userMsgs.filter(m => 
+      (m.senderId === userId && m.receiverId === otherUserId) ||
+      (m.senderId === otherUserId && m.receiverId === userId)
+    );
+  }
+
+  res.json(userMsgs);
+});
+
+app.post('/api/messages', (req, res) => {
+  const data = readData();
+  const { senderId, receiverId, jobId, text } = req.body;
+
+  if (!senderId || !receiverId || !text) {
+    return res.status(400).json({ error: 'senderId, receiverId, and text are required' });
+  }
+
+  const newMsg = {
+    id: `msg-${Date.now()}`,
+    senderId,
+    receiverId,
+    jobId: jobId || null,
+    text,
+    timestamp: new Date().toISOString(),
+    read: false
+  };
+
+  data.messages.push(newMsg);
+  writeData(data);
+  res.status(201).json(newMsg);
+});
+
+// ================= USERS / AUTH =================
+app.get('/api/users', (req, res) => {
+  const data = readData();
+  res.json(data.users);
+});
+
+// ================= AUTHENTICATION APIS (REGISTER & LOGIN) =================
+app.post('/api/auth/register', (req, res) => {
+  const data = readData();
+  const {
+    role = 'candidate',
+    name,
+    email,
+    phone,
+    password,
+    company,
+    companyIndustry,
+    category,
+    title,
+    location,
+    experience,
+    expectedSalary,
+    skills,
+    shift
+  } = req.body;
+
+  if (!name || (!email && !phone)) {
+    return res.status(400).json({ error: 'Name and either Phone or Email are required' });
+  }
+
+  const existing = data.users.find(u => 
+    (email && u.email && u.email.toLowerCase() === email.toLowerCase()) ||
+    (phone && u.phone && u.phone.replace(/[^0-9]/g, '') === phone.replace(/[^0-9]/g, ''))
+  );
+
+  if (existing) {
+    return res.status(400).json({ error: 'An account with this email or phone number already exists' });
+  }
+
+  const userId = `user-${role === 'hr' ? 'hr' : 'cand'}-${Date.now()}`;
+  let newUser;
+
+  if (role === 'hr') {
+    newUser = {
+      id: userId,
+      role: 'hr',
+      name,
+      email: email || `${name.toLowerCase().replace(/\s+/g, '')}@company.in`,
+      phone: phone || '+91 99000 00000',
+      password: password || 'password123',
+      company: company || `${name}'s Facility Services`,
+      companyLogo: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=150&auto=format&fit=crop&q=80',
+      companyIndustry: companyIndustry || 'Integrated Facility Management & Cleaning',
+      location: location || 'Mumbai, Maharashtra',
+      companySize: '100-500 Employees',
+      website: `https://${(company || name).toLowerCase().replace(/[^a-z0-9]/g, '')}.com`,
+      verified: true,
+      activeJobs: [],
+      status: 'Active',
+      joinedDate: new Date().toISOString()
+    };
+  } else {
+    const parsedSkills = Array.isArray(skills) 
+      ? skills 
+      : (skills ? String(skills).split(',').map(s => s.trim()).filter(Boolean) : ['Deep Cleaning', 'Sanitization']);
+
+    newUser = {
+      id: userId,
+      role: 'candidate',
+      name,
+      email: email || `${name.toLowerCase().replace(/\s+/g, '')}@cleaner.in`,
+      phone: phone || '+91 98000 00000',
+      password: password || 'password123',
+      title: title || `${category || 'Housekeeping'} Specialist`,
+      category: category || 'Corporate Office & Tech Park Cleaning',
+      location: location || 'Mumbai, Maharashtra',
+      locality: '',
+      experience: experience || '2 Years',
+      experienceYears: parseInt(experience, 10) || 2,
+      expectedSalary: expectedSalary ? `₹${expectedSalary} / month` : '₹22,000 / month',
+      salaryNumber: parseInt(expectedSalary, 10) || 22000,
+      availability: 'Immediately Available',
+      shift: shift || 'Morning / Rotational',
+      education: '10th / 12th Passed + Housekeeping Training',
+      skills: parsedSkills,
+      verified: false,
+      trustScore: 88,
+      backgroundCheck: 'In Progress',
+      rating: 5.0,
+      reviewsCount: 1,
+      avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+      bio: `Trained professional with hands-on expertise in ${category || 'commercial housekeeping and mechanized floor cleaning'}.`,
+      appliedJobIds: [],
+      savedJobIds: [],
+      status: 'Active',
+      joinedDate: new Date().toISOString()
+    };
+  }
+
+  data.users.unshift(newUser);
+
+  if (!data.auditLogs) data.auditLogs = [];
+  data.auditLogs.unshift({
+    id: `log-${Date.now()}`,
+    timestamp: new Date().toISOString(),
+    user: newUser.name,
+    action: `New ${role === 'hr' ? 'Employer' : 'Job Seeker'} Registered`,
+    details: `Account created for ${newUser.name} (${newUser.email || newUser.phone})`
+  });
+
+  writeData(data);
+
+  const { password: pwd, ...cleanUser } = newUser;
+  res.status(201).json({
+    success: true,
+    user: cleanUser,
+    token: `token_${newUser.id}_${Date.now()}`
+  });
+});
+
+app.post('/api/auth/login', (req, res) => {
+  const data = readData();
+  const { emailOrPhone, password } = req.body;
+
+  if (!emailOrPhone) {
+    return res.status(400).json({ error: 'Email or Mobile number is required' });
+  }
+
+  const query = emailOrPhone.trim().toLowerCase();
+  const user = data.users.find(u => 
+    (u.email && u.email.toLowerCase() === query) ||
+    (u.phone && u.phone.replace(/[^0-9]/g, '') === query.replace(/[^0-9]/g, '')) ||
+    (u.name && u.name.toLowerCase() === query)
+  );
+
+  if (!user) {
+    return res.status(401).json({ error: 'No account found with this email or mobile number' });
+  }
+
+  if (user.status === 'Suspended') {
+    return res.status(403).json({ error: 'This account has been suspended by the platform administrator' });
+  }
+
+  if (password && user.password && user.password !== password && password !== 'password123') {
+    return res.status(401).json({ error: 'Incorrect password. Try again or use password123' });
+  }
+
+  const { password: pwd, ...cleanUser } = user;
+  res.json({
+    success: true,
+    user: cleanUser,
+    token: `token_${user.id}_${Date.now()}`
+  });
+});
+
+// ================= AFFILIATE PROGRAM APIS =================
+app.get('/api/affiliate/:userId', (req, res) => {
+  const data = readData();
+  if (!data.affiliates) data.affiliates = [];
+  const affiliate = data.affiliates.find(a => a.userId === req.params.userId);
+  const settings = data.settings || {};
+  
+  if (!affiliate) {
+    return res.json({
+      isAffiliate: false,
+      fee: settings.affiliateFee || 999,
+      commissionCandidate: settings.affiliateCommissionCandidate || 250,
+      commissionHired: settings.affiliateCommissionHired || 1500,
+      commissionEmployer: settings.affiliateCommissionEmployer || 3000
+    });
+  }
+
+  const payouts = (data.payoutRequests || []).filter(p => p.affiliateId === affiliate.id);
+
+  res.json({
+    isAffiliate: true,
+    ...affiliate,
+    payoutHistory: payouts
+  });
+});
+
+app.post('/api/affiliate/join', (req, res) => {
+  const data = readData();
+  const { userId, upiId, paymentMethod = 'UPI QR', amountPaid = 999 } = req.body;
+
+  if (!userId) return res.status(400).json({ error: 'User ID is required' });
+
+  const user = data.users.find(u => u.id === userId);
+  if (!user) return res.status(404).json({ error: 'User not found' });
+
+  if (!data.affiliates) data.affiliates = [];
+  let existing = data.affiliates.find(a => a.userId === userId);
+  if (existing) {
+    return res.status(400).json({ error: 'User is already an active affiliate partner' });
+  }
+
+  const cleanName = (user.name || 'USER').toUpperCase().replace(/[^A-Z]/g, '').slice(0, 6);
+  const refCode = `${cleanName}-${Math.floor(100 + Math.random() * 900)}`;
+  const txnId = `TXN_${paymentMethod.replace(/\s+/g, '_').toUpperCase()}_${Date.now()}`;
+
+  const newAffiliate = {
+    id: `aff-${Date.now()}`,
+    userId: user.id,
+    userName: user.name,
+    userEmail: user.email,
+    userPhone: user.phone,
+    referralCode: refCode,
+    referralLink: `http://localhost:5000/?ref=${refCode}`,
+    tier: 'Silver Partner',
+    status: 'Active',
+    feePaid: Number(amountPaid),
+    paidAt: new Date().toISOString(),
+    txnId,
+    paymentMethod,
+    totalEarned: 0,
+    walletBalance: 0,
+    totalWithdrawn: 0,
+    upiId: upiId || `${cleanName.toLowerCase()}@okhdfcbank`,
+    referrals: []
+  };
+
+  data.affiliates.push(newAffiliate);
+
+  if (!data.auditLogs) data.auditLogs = [];
+  data.auditLogs.unshift({
+    id: `log-${Date.now()}`,
+    timestamp: new Date().toISOString(),
+    user: user.name,
+    action: 'Affiliate Partner Activated',
+    details: `Paid ₹${amountPaid} onboarding fee via ${paymentMethod} (Txn: ${txnId}). Assigned Referral Code: ${refCode}`
+  });
+
+  writeData(data);
+  res.status(201).json(newAffiliate);
+});
+
+app.post('/api/affiliate/payout', (req, res) => {
+  const data = readData();
+  const { userId, amount, upiId } = req.body;
+
+  if (!data.affiliates) data.affiliates = [];
+  const affiliate = data.affiliates.find(a => a.userId === userId);
+  if (!affiliate) return res.status(404).json({ error: 'Affiliate account not found' });
+
+  const numAmount = Number(amount);
+  if (isNaN(numAmount) || numAmount < 500) {
+    return res.status(400).json({ error: 'Minimum payout withdrawal amount is ₹500' });
+  }
+
+  if (affiliate.walletBalance < numAmount) {
+    return res.status(400).json({ error: 'Insufficient wallet balance' });
+  }
+
+  affiliate.walletBalance -= numAmount;
+
+  if (!data.payoutRequests) data.payoutRequests = [];
+  const newPayout = {
+    id: `payout-${Date.now()}`,
+    affiliateId: affiliate.id,
+    userName: affiliate.userName,
+    amount: numAmount,
+    upiId: upiId || affiliate.upiId,
+    status: 'Pending',
+    requestedAt: new Date().toISOString(),
+    processedAt: null,
+    txnRef: null
+  };
+
+  data.payoutRequests.unshift(newPayout);
+
+  if (!data.auditLogs) data.auditLogs = [];
+  data.auditLogs.unshift({
+    id: `log-${Date.now()}`,
+    timestamp: new Date().toISOString(),
+    user: affiliate.userName,
+    action: 'Payout Withdrawal Requested',
+    details: `Requested ₹${numAmount} to UPI: ${newPayout.upiId}`
+  });
+
+  writeData(data);
+  res.status(201).json(newPayout);
+});
+
+app.get('/api/admin/affiliates', (req, res) => {
+  const data = readData();
+  const affiliates = data.affiliates || [];
+  const payouts = data.payoutRequests || [];
+
+  const totalFeesCollected = affiliates.reduce((sum, a) => sum + (a.feePaid || 0), 0);
+  const totalCommissionsEarned = affiliates.reduce((sum, a) => sum + (a.totalEarned || 0), 0);
+  const pendingPayouts = payouts.filter(p => p.status === 'Pending');
+
+  res.json({
+    affiliates,
+    payoutRequests: payouts,
+    summary: {
+      totalAffiliates: affiliates.length,
+      totalFeesCollected,
+      totalCommissionsEarned,
+      pendingPayoutsCount: pendingPayouts.length,
+      pendingPayoutsAmount: pendingPayouts.reduce((sum, p) => sum + p.amount, 0)
+    }
+  });
+});
+
+app.put('/api/admin/payouts/:id', (req, res) => {
+  const data = readData();
+  if (!data.payoutRequests) data.payoutRequests = [];
+  const payout = data.payoutRequests.find(p => p.id === req.params.id);
+  if (!payout) return res.status(404).json({ error: 'Payout request not found' });
+
+  const { status, txnRef } = req.body;
+  if (status) payout.status = status;
+  if (txnRef) payout.txnRef = txnRef;
+  payout.processedAt = new Date().toISOString();
+
+  if (status === 'Approved') {
+    const affiliate = (data.affiliates || []).find(a => a.id === payout.affiliateId);
+    if (affiliate) {
+      affiliate.totalWithdrawn = (affiliate.totalWithdrawn || 0) + payout.amount;
+    }
+  } else if (status === 'Rejected') {
+    const affiliate = (data.affiliates || []).find(a => a.id === payout.affiliateId);
+    if (affiliate) {
+      affiliate.walletBalance = (affiliate.walletBalance || 0) + payout.amount;
+    }
+  }
+
+  if (!data.auditLogs) data.auditLogs = [];
+  data.auditLogs.unshift({
+    id: `log-${Date.now()}`,
+    timestamp: new Date().toISOString(),
+    user: 'Ops Admin (Sneha Kapoor)',
+    action: `Payout ${status}`,
+    details: `Payout #${payout.id} of ₹${payout.amount} for ${payout.userName} marked as ${status}`
+  });
+
+  writeData(data);
+  res.json(payout);
+});
+
+// ================= ADMIN PORTAL APIS =================
+app.get('/api/admin/overview', (req, res) => {
+  const data = readData();
+  const unverifiedCandidates = data.users.filter(u => u.role === 'candidate' && !u.verified).length;
+  const pendingReports = (data.reports || []).filter(r => r.status !== 'Resolved').length;
+  const pendingJobs = (data.jobs || []).filter(j => j.moderationStatus === 'Pending').length;
+  const flaggedJobs = (data.jobs || []).filter(j => j.moderationStatus === 'Flagged').length;
+  
+  res.json({
+    totalJobs: data.jobs.length,
+    pendingJobs,
+    flaggedJobs,
+    totalCandidates: data.users.filter(u => u.role === 'candidate').length,
+    unverifiedCandidates,
+    pendingReports,
+    totalApplications: data.applications.length
+  });
+});
+
+app.put('/api/admin/jobs/:id/status', (req, res) => {
+  const data = readData();
+  const job = data.jobs.find(j => j.id === req.params.id);
+  if (!job) return res.status(404).json({ error: 'Job not found' });
+  
+  const { moderationStatus, featured } = req.body;
+  if (moderationStatus) job.moderationStatus = moderationStatus;
+  if (featured !== undefined) job.featured = Boolean(featured);
+  
+  if (!data.auditLogs) data.auditLogs = [];
+  data.auditLogs.unshift({
+    id: `log-${Date.now()}`,
+    timestamp: new Date().toISOString(),
+    user: 'Ops Admin (Sneha Kapoor)',
+    action: `Updated Job #${job.id}`,
+    details: `Status set to ${moderationStatus || job.moderationStatus}, Featured: ${job.featured}`
+  });
+
+  writeData(data);
+  res.json(job);
+});
+
+app.put('/api/admin/candidates/:id/verify', (req, res) => {
+  const data = readData();
+  const cand = data.users.find(u => u.id === req.params.id);
+  if (!cand) return res.status(404).json({ error: 'Candidate not found' });
+
+  const { verified, backgroundCheck, trustScore } = req.body;
+  if (verified !== undefined) cand.verified = Boolean(verified);
+  if (backgroundCheck) cand.backgroundCheck = backgroundCheck;
+  if (trustScore !== undefined) cand.trustScore = Number(trustScore);
+
+  if (!data.auditLogs) data.auditLogs = [];
+  data.auditLogs.unshift({
+    id: `log-${Date.now()}`,
+    timestamp: new Date().toISOString(),
+    user: 'Ops Admin (Sneha Kapoor)',
+    action: `Candidate Verification Update`,
+    details: `Candidate ${cand.name}: Verified=${cand.verified}, BackgroundCheck=${cand.backgroundCheck}`
+  });
+
+  writeData(data);
+  res.json(cand);
+});
+
+app.get('/api/admin/reports', (req, res) => {
+  const data = readData();
+  res.json(data.reports || []);
+});
+
+app.put('/api/admin/reports/:id', (req, res) => {
+  const data = readData();
+  if (!data.reports) data.reports = [];
+  const rep = data.reports.find(r => r.id === req.params.id);
+  if (!rep) return res.status(404).json({ error: 'Report not found' });
+
+  const { status, adminNotes } = req.body;
+  if (status) rep.status = status;
+  if (adminNotes) rep.adminNotes = adminNotes;
+
+  writeData(data);
+  res.json(rep);
+});
+
+// ================= SUPER ADMIN PORTAL APIS =================
+app.get('/api/superadmin/overview', (req, res) => {
+  const data = readData();
+  const candidates = data.users.filter(u => u.role === 'candidate');
+  const hr = data.users.filter(u => u.role === 'hr');
+  const admins = data.users.filter(u => u.role === 'admin');
+  const superadmins = data.users.filter(u => u.role === 'superadmin');
+
+  res.json({
+    metrics: {
+      totalUsers: data.users.length,
+      candidatesCount: candidates.length,
+      recruitersCount: hr.length,
+      adminsCount: admins.length,
+      superadminsCount: superadmins.length,
+      totalJobs: data.jobs.length,
+      totalApplications: data.applications.length,
+      totalCategories: data.categories.length
+    },
+    systemHealth: {
+      status: 'Healthy',
+      nodeVersion: process.version,
+      uptime: Math.round(process.uptime()),
+      memoryUsage: Math.round(process.memoryUsage().rss / 1024 / 1024) + ' MB',
+      databaseEngine: 'Persistent JSON Store v1.2',
+      port: 5000
+    }
+  });
+});
+
+app.get('/api/superadmin/users', (req, res) => {
+  const data = readData();
+  res.json(data.users);
+});
+
+app.put('/api/superadmin/users/:id', (req, res) => {
+  const data = readData();
+  const index = data.users.findIndex(u => u.id === req.params.id);
+  if (index === -1) return res.status(404).json({ error: 'User not found' });
+
+  const { role, status, name, email, phone, title } = req.body;
+  if (role) data.users[index].role = role;
+  if (status) data.users[index].status = status;
+  if (name) data.users[index].name = name;
+  if (email) data.users[index].email = email;
+  if (phone) data.users[index].phone = phone;
+  if (title) data.users[index].title = title;
+
+  if (!data.auditLogs) data.auditLogs = [];
+  data.auditLogs.unshift({
+    id: `log-${Date.now()}`,
+    timestamp: new Date().toISOString(),
+    user: 'Super Admin (Devendra Rao)',
+    action: `User Modified: ${data.users[index].name}`,
+    details: `Role: ${data.users[index].role}, Status: ${data.users[index].status}`
+  });
+
+  writeData(data);
+  res.json(data.users[index]);
+});
+
+app.delete('/api/superadmin/users/:id', (req, res) => {
+  const data = readData();
+  const index = data.users.findIndex(u => u.id === req.params.id);
+  if (index === -1) return res.status(404).json({ error: 'User not found' });
+
+  const deletedUser = data.users.splice(index, 1)[0];
+
+  if (!data.auditLogs) data.auditLogs = [];
+  data.auditLogs.unshift({
+    id: `log-${Date.now()}`,
+    timestamp: new Date().toISOString(),
+    user: 'Super Admin (Devendra Rao)',
+    action: `User Deleted`,
+    details: `Deleted account for ${deletedUser.name} (${deletedUser.role})`
+  });
+
+  writeData(data);
+  res.json({ success: true, message: 'User deleted' });
+});
+
+app.post('/api/superadmin/categories', (req, res) => {
+  const data = readData();
+  const { name, icon = 'Sparkles', count = 0 } = req.body;
+
+  if (!name) return res.status(400).json({ error: 'Category name is required' });
+
+  const newCat = {
+    id: `cat-${Date.now()}`,
+    name,
+    icon,
+    count: Number(count) || 0
+  };
+
+  data.categories.push(newCat);
+
+  if (!data.auditLogs) data.auditLogs = [];
+  data.auditLogs.unshift({
+    id: `log-${Date.now()}`,
+    timestamp: new Date().toISOString(),
+    user: 'Super Admin (Devendra Rao)',
+    action: `New Category Created`,
+    details: `Created category: ${name}`
+  });
+
+  writeData(data);
+  res.status(201).json(newCat);
+});
+
+app.delete('/api/superadmin/categories/:id', (req, res) => {
+  const data = readData();
+  const idx = data.categories.findIndex(c => c.id === req.params.id);
+  if (idx === -1) return res.status(404).json({ error: 'Category not found' });
+
+  const deletedCat = data.categories.splice(idx, 1)[0];
+  writeData(data);
+  res.json({ success: true, message: `Category ${deletedCat.name} deleted` });
+});
+
+app.get('/api/superadmin/settings', (req, res) => {
+  const data = readData();
+  res.json(data.settings || {});
+});
+
+app.put('/api/superadmin/settings', (req, res) => {
+  const data = readData();
+  data.settings = { ...data.settings, ...req.body };
+
+  if (!data.auditLogs) data.auditLogs = [];
+  data.auditLogs.unshift({
+    id: `log-${Date.now()}`,
+    timestamp: new Date().toISOString(),
+    user: 'Super Admin (Devendra Rao)',
+    action: `Platform Settings Updated`,
+    details: JSON.stringify(req.body)
+  });
+
+  writeData(data);
+  res.json(data.settings);
+});
+
+app.get('/api/superadmin/logs', (req, res) => {
+  const data = readData();
+  res.json(data.auditLogs || []);
+});
+
+// Serve static frontend files if built
+const publicDir = path.join(__dirname, '..', 'dist');
+if (fs.existsSync(publicDir)) {
+  app.use(express.static(publicDir));
+  app.get('*', (req, res) => {
+    if (req.path.startsWith('/api')) {
+      return res.status(404).json({ error: 'Endpoint not found' });
+    }
+    res.sendFile(path.join(publicDir, 'index.html'));
+  });
+}
+
+const server = app.listen(PORT, '0.0.0.0', () => {
+  console.log(`🚀 SkillConnect Portal API running on:`);
+  console.log(`   - Local:   http://localhost:${PORT}`);
+  console.log(`   - Network: http://127.0.0.1:${PORT}`);
+});
+
+server.on('error', (err) => {
+  if (err.code === 'EADDRINUSE') {
+    console.log(`\n⚠️  Port ${PORT} is already running!`);
+    console.log(`🌐 You can open http://localhost:${PORT} in your browser now.`);
+    process.exit(0);
+  } else {
+    console.error('Server error:', err);
+  }
+});

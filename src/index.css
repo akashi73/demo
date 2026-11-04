@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Official Brand Colors */
+  --brand-terracotta: #DF905B;
+  --brand-burgundy: #701B25;
+  --brand-burgundy-hover: #8F2024;
+  --brand-cream: #F7F1DF;
+  --brand-forest: #285331;
+  --brand-gold: #D69A19;
+  --brand-blue: #4C7897;
+
+  /* Backgrounds */
+  --bg-main: #FBF7EF;
+  --bg-secondary: #F7F1DF;
+  --bg-header: #FFFCF6;
+  --bg-card: #FFFFFF;
+  --bg-footer: #285331;
+
+  /* Typography */
+  --text-heading-primary: #701B25;
+  --text-heading-secondary: #8F2024;
+  --text-body: #62564D;
+  --text-muted: #806F60;
+  --text-light: #FFF8E9;
+
+  /* Buttons */
+  --btn-primary: #8F2024;
+  --btn-primary-hover: #701B25;
+  --btn-secondary-bg: #F7F1DF;
+  --btn-secondary-text: #701B25;
+  --btn-secondary-border: #D69A19;
+
+  /* UI Elements */
+  --border-subtle: #E9DCC7;
+  --badge-offer: #E5AC28;
+  --badge-success: #285331;
+  --accent-decorative: #4C7897;
+  --divider-footer: #49664A;
+}
+
+@layer base {
+  body {
+    @apply antialiased font-sans;
+    background-color: #FBF7EF;
+    color: #62564D;
+  }
+}
+
+.custom-shadow {
+  box-shadow: 0 4px 20px -2px rgba(112, 27, 37, 0.04), 0 2px 6px -1px rgba(112, 27, 37, 0.02);
+}
+
+.card-hover {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -3px rgba(112, 27, 37, 0.08), 0 4px 6px -2px rgba(112, 27, 37, 0.03);
+}

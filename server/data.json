@@ -1,0 +1,1080 @@
+{
+  "categories": [
+    {
+      "id": "cat-hotel",
+      "name": "Hotel & Resort Housekeeping",
+      "icon": "Hotel",
+      "count": 34
+    },
+    {
+      "id": "cat-hospital",
+      "name": "Hospital & Healthcare Sanitation",
+      "icon": "HeartPulse",
+      "count": 28
+    },
+    {
+      "id": "cat-corporate",
+      "name": "Corporate Office & Tech Park Cleaning",
+      "icon": "Building2",
+      "count": 42
+    },
+    {
+      "id": "cat-residential",
+      "name": "Residential & Villa Deep Cleaning",
+      "icon": "Home",
+      "count": 26
+    },
+    {
+      "id": "cat-industrial",
+      "name": "Industrial & Mechanized Floor Scrubbing",
+      "icon": "Sparkles",
+      "count": 19
+    },
+    {
+      "id": "cat-supervisor",
+      "name": "Facility Supervisors & Lead Housekeepers",
+      "icon": "ShieldCheck",
+      "count": 15
+    },
+    {
+      "id": "cat-facade",
+      "name": "Glass Façade & High-Rise Cleaning",
+      "icon": "Maximize2",
+      "count": 12
+    },
+    {
+      "id": "cat-upholstery",
+      "name": "Carpet, Sofa & Upholstery Care",
+      "icon": "Layers",
+      "count": 18
+    }
+  ],
+  "users": [
+    {
+      "id": "user-hr-1792991247314",
+      "role": "hr",
+      "name": "akash",
+      "email": "0@gmail.com",
+      "phone": "1234567",
+      "password": "123456",
+      "company": "bmw",
+      "companyLogo": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=150&auto=format&fit=crop&q=80",
+      "companyIndustry": "Commercial Offices & IT Tech Parks",
+      "location": "ranchi",
+      "companySize": "100-500 Employees",
+      "website": "https://bmw.com",
+      "verified": true,
+      "activeJobs": [],
+      "status": "Active",
+      "joinedDate": "2026-10-26T05:07:27.315Z"
+    },
+    {
+      "id": "user-cand-1792944923257",
+      "role": "candidate",
+      "name": "Manish Chandel",
+      "email": "manish.cleaner@example.com",
+      "phone": "+91 98220 55112",
+      "password": "password123",
+      "title": "Infection Control Housekeeping Lead",
+      "category": "Hospital & Healthcare Sanitation",
+      "location": "Pune, Maharashtra",
+      "locality": "",
+      "experience": "3 Years",
+      "experienceYears": 3,
+      "expectedSalary": "₹24000 / month",
+      "salaryNumber": 24000,
+      "availability": "Immediately Available",
+      "shift": "Morning Shift (7 AM - 3 PM)",
+      "education": "10th / 12th Passed + Housekeeping Training",
+      "skills": [
+        "Deep Cleaning",
+        "Sanitization"
+      ],
+      "verified": false,
+      "trustScore": 88,
+      "backgroundCheck": "In Progress",
+      "rating": 5,
+      "reviewsCount": 1,
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+      "bio": "Trained professional with hands-on expertise in Hospital & Healthcare Sanitation.",
+      "appliedJobIds": [],
+      "savedJobIds": [],
+      "status": "Active",
+      "joinedDate": "2026-10-25T16:15:23.257Z"
+    },
+    {
+      "id": "user-superadmin-1",
+      "role": "superadmin",
+      "name": "Devendra Rao",
+      "email": "superadmin@skillconnect.in",
+      "phone": "+91 99000 00001",
+      "title": "Platform Super Administrator & Architect",
+      "location": "Bengaluru / Mumbai",
+      "status": "Active",
+      "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&auto=format&fit=crop&q=80",
+      "joinedDate": "2026-01-15",
+      "password": "password123"
+    },
+    {
+      "id": "user-admin-1",
+      "role": "admin",
+      "name": "Sneha Kapoor",
+      "email": "admin.ops@skillconnect.in",
+      "phone": "+91 98200 11223",
+      "title": "Operations, Trust & Verification Admin",
+      "location": "Mumbai, Maharashtra",
+      "status": "Active",
+      "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&auto=format&fit=crop&q=80",
+      "joinedDate": "2026-03-10",
+      "password": "password123"
+    },
+    {
+      "id": "user-cand-1",
+      "role": "candidate",
+      "name": "Rahul Sharma",
+      "email": "rahul.sharma@example.com",
+      "phone": "+91 98201 44521",
+      "title": "Facility & Housekeeping Supervisor",
+      "category": "Facility & Housekeeping",
+      "location": "Mumbai, Maharashtra",
+      "locality": "Andheri East",
+      "experience": "4 Years",
+      "experienceYears": 4,
+      "expectedSalary": "₹24,000 / month",
+      "salaryNumber": 24000,
+      "availability": "Immediately Available",
+      "shift": "Day / Rotational",
+      "education": "Higher Secondary (12th Passed) + Facility Certification",
+      "skills": [
+        "Deep Cleaning",
+        "Floor Scrubbing Machine",
+        "Chemical Dilution Safety",
+        "Team Supervision",
+        "Hygiene Standards",
+        "Waste Management"
+      ],
+      "verified": true,
+      "rating": 4.9,
+      "reviewsCount": 18,
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+      "bio": "Certified commercial facility supervisor with 4 years of proven track record managing housekeeping operations for Fortune 500 corporate offices and private hospitals. Expert in handling industrial floor polishers and mechanized cleaning machines.",
+      "appliedJobIds": [
+        "job-1"
+      ],
+      "savedJobIds": [
+        "job-2",
+        "job-6"
+      ],
+      "backgroundCheck": "Verified",
+      "trustScore": 94,
+      "status": "Active",
+      "password": "password123"
+    },
+    {
+      "id": "user-cand-2",
+      "role": "candidate",
+      "name": "Priya Verma",
+      "email": "priya.verma@example.com",
+      "phone": "+91 98712 33490",
+      "title": "Office Executive & Data Specialist",
+      "category": "Office, Admin & Data Entry",
+      "location": "Delhi NCR",
+      "locality": "Connaught Place",
+      "experience": "2.5 Years",
+      "experienceYears": 2.5,
+      "expectedSalary": "₹22,000 / month",
+      "salaryNumber": 22000,
+      "availability": "Within 7 Days",
+      "shift": "General Shift (9 AM - 6 PM)",
+      "education": "B.Com Graduate",
+      "skills": [
+        "MS Excel / Advanced Spreadsheets",
+        "Data Entry",
+        "Tally ERP 9 / Prime",
+        "Front Desk Reception",
+        "Billing & Invoicing",
+        "Client Handling"
+      ],
+      "verified": true,
+      "rating": 4.8,
+      "reviewsCount": 12,
+      "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80",
+      "bio": "Organized and detail-oriented B.Com graduate with 2.5 years experience managing office records, vendor payments, customer inquiries, and data entry with 99% accuracy.",
+      "appliedJobIds": [
+        "job-5"
+      ],
+      "savedJobIds": [],
+      "backgroundCheck": "Verified",
+      "trustScore": 99,
+      "status": "Active",
+      "password": "password123"
+    },
+    {
+      "id": "user-cand-3",
+      "role": "candidate",
+      "name": "Amit Kumar",
+      "email": "amit.kumar@example.com",
+      "phone": "+91 98110 56781",
+      "title": "Licensed Wireman & HVAC Technician",
+      "category": "Skilled Trades & Maintenance",
+      "location": "Gurgaon, Haryana",
+      "locality": "Sector 48",
+      "experience": "5 Years",
+      "experienceYears": 5,
+      "expectedSalary": "₹30,000 / month",
+      "salaryNumber": 30000,
+      "availability": "Immediately Available",
+      "shift": "Full-time (Emergency on-call)",
+      "education": "ITI Diploma in Electrical",
+      "skills": [
+        "Industrial Wiring",
+        "HVAC / Chiller Maintenance",
+        "Three-Phase Power Panels",
+        "Circuit Troubleshooting",
+        "Fire Alarm Systems",
+        "Electrical Safety"
+      ],
+      "verified": true,
+      "rating": 5,
+      "reviewsCount": 26,
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+      "bio": "Certified ITI electrician with 5 years experience in commercial high-rise buildings and warehouses. Skilled in preventive maintenance, breakdown resolution, and HVAC plants.",
+      "appliedJobIds": [
+        "job-3",
+        "job-7"
+      ],
+      "savedJobIds": [
+        "job-3"
+      ],
+      "backgroundCheck": "Verified",
+      "trustScore": 94,
+      "status": "Active",
+      "password": "password123"
+    },
+    {
+      "id": "user-cand-4",
+      "role": "candidate",
+      "name": "Sunita Devi",
+      "email": "sunita.devi@example.com",
+      "phone": "+91 99881 22340",
+      "title": "Restroom & Deep Cleaning Professional",
+      "category": "Facility & Housekeeping",
+      "location": "Bengaluru, Karnataka",
+      "locality": "Whitefield",
+      "experience": "3 Years",
+      "experienceYears": 3,
+      "expectedSalary": "₹19,000 / month",
+      "salaryNumber": 19000,
+      "availability": "Immediately Available",
+      "shift": "Morning Shift",
+      "education": "10th Passed",
+      "skills": [
+        "Commercial Cleaning",
+        "Restroom Sanitization",
+        "Infection Control",
+        "Trash Compacting",
+        "PPE Protocol"
+      ],
+      "verified": true,
+      "rating": 4.7,
+      "reviewsCount": 15,
+      "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80",
+      "bio": "Dedicated housekeeping worker with 3 years experience at multinational tech parks in Whitefield. Known for immaculate sanitation standards and reliability.",
+      "appliedJobIds": [
+        "job-2"
+      ],
+      "savedJobIds": [
+        "job-1"
+      ],
+      "backgroundCheck": "Verified",
+      "trustScore": 95,
+      "status": "Active",
+      "password": "password123"
+    },
+    {
+      "id": "user-cand-5",
+      "role": "candidate",
+      "name": "Mohammad Rizwan",
+      "email": "rizwan.m@example.com",
+      "phone": "+91 97120 44883",
+      "title": "Warehouse Logistics & Forklift Operator",
+      "category": "Logistics, Delivery & Warehouse",
+      "location": "Noida, Uttar Pradesh",
+      "locality": "Sector 62",
+      "experience": "3.5 Years",
+      "experienceYears": 3.5,
+      "expectedSalary": "₹25,000 / month",
+      "salaryNumber": 25000,
+      "availability": "Immediately Available",
+      "shift": "Rotational Shifts",
+      "education": "12th Passed + Heavy Machinery License",
+      "skills": [
+        "Forklift Operation",
+        "Barcode & RFID Scanning",
+        "Inventory Stacking",
+        "Dispatch Order Picking",
+        "Safety Auditing"
+      ],
+      "verified": true,
+      "rating": 4.9,
+      "reviewsCount": 20,
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80",
+      "bio": "Certified forklift driver and inventory handler with experience at Amazon and Flipkart fulfillment centers. Zero-damage record over 3 years.",
+      "appliedJobIds": [
+        "job-4"
+      ],
+      "savedJobIds": [],
+      "backgroundCheck": "Verified",
+      "trustScore": 95,
+      "status": "Active",
+      "password": "password123"
+    },
+    {
+      "id": "user-cand-6",
+      "role": "candidate",
+      "name": "Rajesh Patel",
+      "email": "rajesh.chef@example.com",
+      "phone": "+91 98450 12903",
+      "title": "Continental & Indian Commis Chef",
+      "category": "Hospitality & Food Services",
+      "location": "Goa",
+      "locality": "Calangute",
+      "experience": "6 Years",
+      "experienceYears": 6,
+      "expectedSalary": "₹28,000 / month",
+      "salaryNumber": 28000,
+      "availability": "Within 15 Days",
+      "shift": "Full-time (Split Shift)",
+      "education": "Diploma in Hotel Management & Catering",
+      "skills": [
+        "Indian Cuisine",
+        "Continental Starters",
+        "Food Safety & HACCP",
+        "Kitchen Inventory",
+        "Menu Costing"
+      ],
+      "verified": true,
+      "rating": 4.9,
+      "reviewsCount": 32,
+      "avatar": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&auto=format&fit=crop&q=80",
+      "bio": "Culinary professional with experience in 4-star boutique resorts. Specialized in high-volume breakfast buffet setups and seafood preparations.",
+      "appliedJobIds": [
+        "job-6"
+      ],
+      "savedJobIds": [],
+      "backgroundCheck": "Verified",
+      "trustScore": 92,
+      "status": "Active",
+      "password": "password123"
+    },
+    {
+      "id": "user-hr-1",
+      "role": "hr",
+      "name": "Priya Deshmukh",
+      "email": "hr@urbanassist.com",
+      "company": "UrbanAssist Facility & Cleaning Services",
+      "companyLogo": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=150&auto=format&fit=crop&q=80",
+      "companyIndustry": "Integrated Facility Management & Staffing",
+      "location": "Mumbai, Maharashtra",
+      "phone": "+91 99300 88210",
+      "companySize": "500-1000 Employees",
+      "website": "https://urbanassist-example.in",
+      "verified": true,
+      "activeJobs": [
+        "job-1",
+        "job-2",
+        "job-7"
+      ],
+      "password": "password123",
+      "status": "Active"
+    },
+    {
+      "id": "user-hr-2",
+      "role": "hr",
+      "name": "Vikram Sethi",
+      "email": "hiring@apexlogistics.in",
+      "company": "Apex Logistics & Supply Chain",
+      "companyLogo": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=150&auto=format&fit=crop&q=80",
+      "companyIndustry": "Warehousing, Courier & 3PL Logistics",
+      "location": "Gurgaon / Delhi NCR",
+      "phone": "+91 98101 23456",
+      "companySize": "1000-5000 Employees",
+      "website": "https://apexlogistics-example.in",
+      "verified": true,
+      "activeJobs": [
+        "job-3",
+        "job-4"
+      ],
+      "password": "password123",
+      "status": "Active"
+    },
+    {
+      "id": "user-hr-3",
+      "role": "hr",
+      "name": "Ananya Roy",
+      "email": "careers@grandheritage.com",
+      "company": "Grand Heritage Resorts & Luxury Stays",
+      "companyLogo": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=150&auto=format&fit=crop&q=80",
+      "companyIndustry": "Luxury Hospitality & Tourism",
+      "location": "Goa & Jaipur",
+      "phone": "+91 83222 99100",
+      "companySize": "200-500 Employees",
+      "website": "https://grandheritage-example.com",
+      "verified": true,
+      "activeJobs": [
+        "job-6"
+      ],
+      "password": "password123",
+      "status": "Active"
+    },
+    {
+      "id": "user-cand-1792939809110",
+      "role": "candidate",
+      "name": "Kavita Soni",
+      "email": "kavita.soni110@skillconnect.in",
+      "phone": "+91 98331 99221",
+      "title": "Hospital Sanitization Specialist",
+      "category": "Facility & Housekeeping",
+      "location": "Pune, Maharashtra",
+      "locality": "",
+      "experience": "1 Year",
+      "experienceYears": 3,
+      "expectedSalary": "₹23,000 / month",
+      "salaryNumber": 20000,
+      "availability": "Immediately Available",
+      "shift": "Full-time Day Shift",
+      "education": "High School / Vocational Training",
+      "skills": [
+        "Infection Control",
+        "Deep Cleaning",
+        "Autoclave Sterilization"
+      ],
+      "verified": true,
+      "rating": 5,
+      "reviewsCount": 1,
+      "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80",
+      "bio": "Dedicated and reliable professional with experience in Facility & Housekeeping. Ready to join immediately.",
+      "appliedJobIds": [],
+      "savedJobIds": [],
+      "backgroundCheck": "Verified",
+      "trustScore": 96,
+      "status": "Active",
+      "password": "password123"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "job-1792991336730",
+      "title": "hosekeeping",
+      "company": "bmw",
+      "companyId": "user-hr-1792991247314",
+      "logo": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=150&auto=format&fit=crop&q=80",
+      "category": "Facility & Housekeeping",
+      "location": "Mumbai, Maharashtra",
+      "area": "Andheri East",
+      "jobType": "Full Time",
+      "workMode": "On-site",
+      "minExp": 1,
+      "maxExp": 3,
+      "salaryMin": 20000,
+      "salaryMax": 28000,
+      "salaryDisplay": "₹20,000 - ₹28,000 / month",
+      "openings": 3,
+      "urgent": true,
+      "verified": true,
+      "postedDate": "2026-10-26",
+      "description": "Immediate requirement for hosekeeping at bmw. Competitive salary with verified benefits.",
+      "skills": [
+        "Deep Cleaning",
+        "Floor Buffing",
+        "Sanitation"
+      ],
+      "benefits": [
+        "PF & ESIC",
+        "Overtime Pay (1.5x)",
+        "Free Uniform",
+        "Monthly Attendance Bonus"
+      ],
+      "applicantsCount": 0
+    },
+    {
+      "id": "job-hk-1",
+      "title": "Senior Housekeeping Supervisor (Corporate IT Park)",
+      "company": "UrbanAssist Facility Management Services",
+      "companyId": "user-hr-1",
+      "logo": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=150&auto=format&fit=crop&q=80",
+      "category": "Facility Supervisors & Lead Housekeepers",
+      "location": "Mumbai, Maharashtra",
+      "area": "BKC & Andheri East",
+      "jobType": "Full Time",
+      "workMode": "On-site",
+      "minExp": 3,
+      "maxExp": 6,
+      "salaryMin": 24000,
+      "salaryMax": 32000,
+      "salaryDisplay": "₹24,000 - ₹32,000 / month",
+      "openings": 5,
+      "urgent": true,
+      "verified": true,
+      "moderationStatus": "Approved",
+      "featured": true,
+      "postedDate": "2026-10-24",
+      "description": "Lead a team of 15-20 commercial housekeeping janitors in a Grade-A corporate tech park. Oversee daily mechanized floor scrubbing, Diversey chemical dilution safety (Taski R1 to R9), washroom hygiene audits, and inventory management.",
+      "skills": [
+        "Single-Disc Scrubber",
+        "Taski Chemical Safety",
+        "Team Leadership",
+        "Restroom Hygiene Audits",
+        "Waste Segregation"
+      ],
+      "benefits": [
+        "PF & ESIC Medical Cover",
+        "Monthly Attendance Bonus (₹2,000)",
+        "Overtime Pay (1.5x)",
+        "Uniform & Safety Shoes Provided"
+      ],
+      "applicantsCount": 16
+    },
+    {
+      "id": "job-hk-2",
+      "title": "Hospital OT & Infection Control Cleaning Specialist",
+      "company": "CityCare Multispecialty Hospitals",
+      "companyId": "user-hr-1",
+      "logo": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=150&auto=format&fit=crop&q=80",
+      "category": "Hospital & Healthcare Sanitation",
+      "location": "Delhi NCR",
+      "area": "Saket & Noida Sector 62",
+      "jobType": "Full Time",
+      "workMode": "On-site",
+      "minExp": 2,
+      "maxExp": 5,
+      "salaryMin": 22000,
+      "salaryMax": 28000,
+      "salaryDisplay": "₹22,000 - ₹28,000 / month",
+      "openings": 8,
+      "urgent": true,
+      "verified": true,
+      "moderationStatus": "Approved",
+      "featured": true,
+      "postedDate": "2026-10-25",
+      "description": "Critical cleaning and sanitation of Operation Theatres (OT), Intensive Care Units (ICU), and patient isolation wards. Strict adherence to NABH bio-medical waste segregation, autoclave disinfection, and full PPE protocols.",
+      "skills": [
+        "Infection Control Protocol",
+        "Bio-Medical Waste Segregation",
+        "Autoclave Disinfection",
+        "PPE Protocol",
+        "Hospital Sanitization"
+      ],
+      "benefits": [
+        "ESIC Medical Hospitalization Cover",
+        "Annual Health Checkup Free",
+        "Subsidized Canteen Meals",
+        "PF & Gratuity"
+      ],
+      "applicantsCount": 22
+    },
+    {
+      "id": "job-hk-3",
+      "title": "Luxury Beach Resort Guest Room Attendant (Food + Stay)",
+      "company": "Grand Heritage Resorts & Luxury Villas",
+      "companyId": "user-hr-3",
+      "logo": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=150&auto=format&fit=crop&q=80",
+      "category": "Hotel & Resort Housekeeping",
+      "location": "Goa",
+      "area": "Candolim & Calangute Beach",
+      "jobType": "Full Time",
+      "workMode": "On-site",
+      "minExp": 1,
+      "maxExp": 4,
+      "salaryMin": 20000,
+      "salaryMax": 26000,
+      "salaryDisplay": "₹20,000 - ₹26,000 / month (Free AC Stay + Food)",
+      "openings": 12,
+      "urgent": true,
+      "verified": true,
+      "moderationStatus": "Approved",
+      "featured": true,
+      "postedDate": "2026-10-25",
+      "description": "Responsible for 5-star standard room cleaning, luxury bed making (hospital corners), bathroom deep descaling, minibar replenishment, and evening turndown service for sea-facing private pool villas.",
+      "skills": [
+        "5-Star Bed Making",
+        "Linen Management",
+        "Bathroom Descaling",
+        "Guest Interaction",
+        "Turndown Service"
+      ],
+      "benefits": [
+        "Free Shared AC Staff Accommodation",
+        "Free 3 Buffet Meals Daily",
+        "Service Charge Pool Share (₹4,000 - ₹6,000/mo extra)",
+        "PF & Health Cover"
+      ],
+      "applicantsCount": 31
+    },
+    {
+      "id": "job-hk-4",
+      "title": "Commercial Ride-On Floor Scrubber Operator",
+      "company": "Apex Logistics & Warehouse Hubs",
+      "companyId": "user-hr-2",
+      "logo": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=150&auto=format&fit=crop&q=80",
+      "category": "Industrial & Mechanized Floor Scrubbing",
+      "location": "Gurgaon, Haryana",
+      "area": "Manesar Industrial Area",
+      "jobType": "Full Time",
+      "workMode": "On-site",
+      "minExp": 2,
+      "maxExp": 5,
+      "salaryMin": 22000,
+      "salaryMax": 29000,
+      "salaryDisplay": "₹22,000 - ₹29,000 / month",
+      "openings": 4,
+      "urgent": false,
+      "verified": true,
+      "moderationStatus": "Approved",
+      "featured": false,
+      "postedDate": "2026-10-23",
+      "description": "Operate battery-powered industrial ride-on scrubber-driers and floor sweepers across a 500,000 sq ft logistics fulfillment center. Ensure epoxy floor degreasing, tyre mark removal, and daily water-chemical tank maintenance.",
+      "skills": [
+        "Ride-on Scrubber Machine",
+        "Epoxy Floor Degreasing",
+        "Industrial Battery Maintenance",
+        "Spill Containment"
+      ],
+      "benefits": [
+        "PF & ESIC",
+        "Company Bus Pick & Drop",
+        "Night Shift Allowance (₹150/night)",
+        "Quarterly Bonus"
+      ],
+      "applicantsCount": 9
+    },
+    {
+      "id": "job-hk-5",
+      "title": "Residential Villa & Sofa Carpet Deep Cleaner",
+      "company": "CleanSpark Premium Home Services",
+      "companyId": "user-hr-1",
+      "logo": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=150&auto=format&fit=crop&q=80",
+      "category": "Residential & Villa Deep Cleaning",
+      "location": "Bengaluru, Karnataka",
+      "area": "Whitefield & Indiranagar",
+      "jobType": "Full Time",
+      "workMode": "On-site",
+      "minExp": 1,
+      "maxExp": 4,
+      "salaryMin": 21000,
+      "salaryMax": 27000,
+      "salaryDisplay": "₹21,000 - ₹27,000 / month",
+      "openings": 6,
+      "urgent": true,
+      "verified": true,
+      "moderationStatus": "Approved",
+      "featured": false,
+      "postedDate": "2026-10-22",
+      "description": "Providing on-demand residential villa deep cleaning services. Expertise in wet-extraction sofa shampooing, Italian marble floor buffing, modular kitchen oil chimney degreasing, and balcony pressure washing.",
+      "skills": [
+        "Sofa Carpet Shampoo Machine",
+        "Marble Polishing",
+        "Kitchen Chimney Degreasing",
+        "High-Pressure Jet Washer"
+      ],
+      "benefits": [
+        "Daily Travel & Fuel Allowance",
+        "Tips & Incentives (approx ₹5,000/mo)",
+        "Company Smartphone Provided",
+        "Health Insurance"
+      ],
+      "applicantsCount": 14
+    },
+    {
+      "id": "job-hk-6",
+      "title": "High-Rise Façade Glass & Window Cleaning Technician",
+      "company": "UrbanAssist Facility Management Services",
+      "companyId": "user-hr-1",
+      "logo": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=150&auto=format&fit=crop&q=80",
+      "category": "Glass Façade & High-Rise Cleaning",
+      "location": "Mumbai, Maharashtra",
+      "area": "Lower Parel & Worli Towers",
+      "jobType": "Full Time",
+      "workMode": "On-site",
+      "minExp": 2,
+      "maxExp": 6,
+      "salaryMin": 26000,
+      "salaryMax": 35000,
+      "salaryDisplay": "₹26,000 - ₹35,000 / month",
+      "openings": 3,
+      "urgent": true,
+      "verified": true,
+      "moderationStatus": "Approved",
+      "featured": true,
+      "postedDate": "2026-10-25",
+      "description": "Operating building cradle gondolas and rope access rigs for external glass façade window cleaning on 40+ story high-rise commercial towers. Strict compliance with industrial fall arrest harnesses and wind speed limits.",
+      "skills": [
+        "Cradle Gondola Operation",
+        "Rope Access Rigging",
+        "Safety Harness Protocol",
+        "Façade Chemical Cleaning"
+      ],
+      "benefits": [
+        "High Hazard Special Allowance (₹4,000/mo extra)",
+        "Full Accidental Term Insurance (₹15 Lakhs)",
+        "PF & ESIC",
+        "Safety Gear Provided"
+      ],
+      "applicantsCount": 7
+    }
+  ],
+  "applications": [
+    {
+      "id": "app-101",
+      "jobId": "job-1",
+      "candidateId": "user-cand-1",
+      "appliedAt": "2026-10-24T10:30:00Z",
+      "status": "Shortlisted",
+      "recruiterNotes": "Strong profile with 4 years experience leading teams. Impressive background with mechanized scrubber handling.",
+      "interviewDate": "2026-10-27T11:00:00Z",
+      "interviewLocation": "UrbanAssist HQ, Andheri East, Mumbai or Google Meet"
+    },
+    {
+      "id": "app-102",
+      "jobId": "job-3",
+      "candidateId": "user-cand-3",
+      "appliedAt": "2026-10-24T14:15:00Z",
+      "status": "Interview Scheduled",
+      "recruiterNotes": "Licensed wireman with 5 years exp. Scheduled technical round with Plant Engineer.",
+      "interviewDate": "2026-10-26T15:30:00Z",
+      "interviewLocation": "Apex Manesar Warehouse, Gate 2"
+    },
+    {
+      "id": "app-103",
+      "jobId": "job-2",
+      "candidateId": "user-cand-4",
+      "appliedAt": "2026-10-23T16:00:00Z",
+      "status": "Applied",
+      "recruiterNotes": "Profile under review for Delhi / Noida region openings."
+    },
+    {
+      "id": "app-104",
+      "jobId": "job-4",
+      "candidateId": "user-cand-5",
+      "appliedAt": "2026-10-22T09:40:00Z",
+      "status": "Shortlisted",
+      "recruiterNotes": "Certified forklift license verified. Checking shift compatibility."
+    },
+    {
+      "id": "app-105",
+      "jobId": "job-6",
+      "candidateId": "user-cand-6",
+      "appliedAt": "2026-10-25T11:20:00Z",
+      "status": "Hired",
+      "recruiterNotes": "Food trial test passed with excellence! Offer letter rolled out for Commis Chef role."
+    }
+  ],
+  "messages": [
+    {
+      "id": "msg-1",
+      "senderId": "user-hr-1",
+      "receiverId": "user-cand-1",
+      "jobId": "job-1",
+      "text": "Hello Rahul, we reviewed your profile for Housekeeping Supervisor at Andheri IT Park. Your machine handling experience is exactly what we need.",
+      "timestamp": "2026-10-24T12:00:00Z",
+      "read": true
+    },
+    {
+      "id": "msg-2",
+      "senderId": "user-cand-1",
+      "receiverId": "user-hr-1",
+      "jobId": "job-1",
+      "text": "Thank you Priya ma'am! I have operated both single-disc scrubbers and ride-on machines. I am available for the interview on Tuesday.",
+      "timestamp": "2026-10-24T12:15:00Z",
+      "read": true
+    },
+    {
+      "id": "msg-3",
+      "senderId": "user-hr-1",
+      "receiverId": "user-cand-1",
+      "jobId": "job-1",
+      "text": "Perfect! Please bring your Aadhaar card, previous company experience certificate, and bank passbook copy at 11:00 AM.",
+      "timestamp": "2026-10-24T12:20:00Z",
+      "read": true
+    }
+  ],
+  "reports": [
+    {
+      "id": "rep-1",
+      "type": "Verification Request",
+      "title": "Aadhaar & Experience Document Review",
+      "reporterName": "Rahul Sharma (Candidate)",
+      "reporterRole": "candidate",
+      "subject": "Housekeeping Supervisor Certification",
+      "details": "Candidate submitted IT park supervisor certificate for manual verification check.",
+      "status": "Resolved",
+      "priority": "Medium",
+      "date": "2026-10-24"
+    },
+    {
+      "id": "rep-2",
+      "type": "Recruiter Inquiry",
+      "title": "Bulk Staffing Assistance for Resort Opening",
+      "reporterName": "Ananya Roy (Grand Heritage Resorts)",
+      "reporterRole": "hr",
+      "subject": "Urgent need for 10 housekeeping & 4 kitchen leads in Goa",
+      "details": "Requested assistance with featured job listing and direct candidate outreach.",
+      "status": "In Review",
+      "priority": "High",
+      "date": "2026-10-25"
+    },
+    {
+      "id": "rep-3",
+      "type": "Quality Flag",
+      "title": "Duplicate Job Post Check",
+      "reporterName": "System Automated Guard",
+      "reporterRole": "system",
+      "subject": "Job #job-2 similarity check",
+      "details": "Automated spam check passed. Recruiter identity verified.",
+      "status": "Dismissed",
+      "priority": "Low",
+      "date": "2026-10-23"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "log-1792991247315",
+      "timestamp": "2026-10-26T05:07:27.315Z",
+      "user": "akash",
+      "action": "New Employer Registered",
+      "details": "Account created for akash (0@gmail.com)"
+    },
+    {
+      "id": "log-1792944923258",
+      "timestamp": "2026-10-25T16:15:23.258Z",
+      "user": "Manish Chandel",
+      "action": "New Job Seeker Registered",
+      "details": "Account created for Manish Chandel (manish.cleaner@example.com)"
+    },
+    {
+      "id": "log-1792944190924",
+      "timestamp": "2026-10-25T16:03:10.924Z",
+      "user": "Ops Admin (Sneha Kapoor)",
+      "action": "Payout Approved",
+      "details": "Payout #payout-1792944190886 of ₹1000 for Rahul Sharma marked as Approved"
+    },
+    {
+      "id": "log-1792944190886",
+      "timestamp": "2026-10-25T16:03:10.886Z",
+      "user": "Rahul Sharma",
+      "action": "Payout Withdrawal Requested",
+      "details": "Requested ₹1000 to UPI: rahul.sharma@okhdfcbank"
+    },
+    {
+      "id": "log-1792944182287",
+      "timestamp": "2026-10-25T16:03:02.287Z",
+      "user": "Amit Kumar",
+      "action": "Affiliate Partner Activated",
+      "details": "Paid ₹999 onboarding fee via UPI QR (Txn: TXN_UPI_QR_1792944182287). Assigned Referral Code: AMITKU-239"
+    },
+    {
+      "id": "log-1792943075535",
+      "timestamp": "2026-10-25T15:44:35.535Z",
+      "user": "Super Admin (Devendra Rao)",
+      "action": "User Modified: Rahul Sharma",
+      "details": "Role: candidate, Status: Active"
+    },
+    {
+      "id": "log-101",
+      "timestamp": "2026-10-25T19:30:00Z",
+      "user": "Devendra Rao (Super Admin)",
+      "action": "System Health Check",
+      "details": "All 8 skill categories and REST endpoints verified."
+    },
+    {
+      "id": "log-102",
+      "timestamp": "2026-10-25T18:15:00Z",
+      "user": "Sneha Kapoor (Admin)",
+      "action": "Approved Job",
+      "details": "Job #job-6 (Resort Housekeeping & Kitchen Lead) approved & featured."
+    },
+    {
+      "id": "log-103",
+      "timestamp": "2026-10-25T17:40:00Z",
+      "user": "Sneha Kapoor (Admin)",
+      "action": "Verified Candidate",
+      "details": "Granted Verified Skill Badge to Rahul Sharma."
+    },
+    {
+      "id": "log-104",
+      "timestamp": "2026-10-25T16:10:00Z",
+      "user": "Devendra Rao (Super Admin)",
+      "action": "Updated Settings",
+      "details": "Allowed 1-Click Instant Apply without mandatory resume upload."
+    }
+  ],
+  "settings": {
+    "platformName": "SkillConnect Direct Hiring Portal",
+    "allowInstantApply": true,
+    "requireOtp": false,
+    "requireJobApproval": false,
+    "requireSkillQuiz": false,
+    "maxJobsPerRecruiter": 25,
+    "autoApproveVerifiedCandidates": true,
+    "maintenanceMode": false,
+    "supportEmail": "support@skillconnect.in",
+    "emergencyHelpline": "1800-889-SKILL",
+    "hiringFee": "Free (Public Employment Initiative)",
+    "affiliateProgramEnabled": true,
+    "affiliateFee": 999,
+    "affiliateCommissionCandidate": 250,
+    "affiliateCommissionHired": 1500,
+    "affiliateCommissionEmployer": 3000
+  },
+  "affiliates": [
+    {
+      "id": "aff-101",
+      "userId": "user-cand-1",
+      "userName": "Rahul Sharma",
+      "userEmail": "rahul.sharma@example.com",
+      "userPhone": "+91 98201 44521",
+      "referralCode": "RAHUL-SKILL100",
+      "referralLink": "http://localhost:5000/?ref=RAHUL-SKILL100",
+      "tier": "Gold Partner",
+      "status": "Active",
+      "feePaid": 999,
+      "paidAt": "2026-10-24T09:30:00Z",
+      "txnId": "PAY_UPI_9921481023",
+      "totalEarned": 5250,
+      "walletBalance": 2250,
+      "totalWithdrawn": 3000,
+      "upiId": "rahul.sharma@okhdfcbank",
+      "referrals": [
+        {
+          "id": "ref-1",
+          "name": "Kavita Soni",
+          "type": "Candidate",
+          "skill": "Hospital Sanitization",
+          "status": "Hired",
+          "commission": 1750,
+          "date": "2026-10-24"
+        },
+        {
+          "id": "ref-2",
+          "name": "Sunita Devi",
+          "type": "Candidate",
+          "skill": "Restroom Deep Cleaning",
+          "status": "Verified",
+          "commission": 250,
+          "date": "2026-10-24"
+        },
+        {
+          "id": "ref-3",
+          "name": "Mohammad Rizwan",
+          "type": "Candidate",
+          "skill": "Warehouse Forklift",
+          "status": "Verified",
+          "commission": 250,
+          "date": "2026-10-25"
+        },
+        {
+          "id": "ref-4",
+          "name": "Grand Heritage Hotels",
+          "type": "Employer",
+          "skill": "Hospitality Staffing",
+          "status": "Hiring Active",
+          "commission": 3000,
+          "date": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "id": "aff-102",
+      "userId": "user-cand-2",
+      "userName": "Priya Verma",
+      "userEmail": "priya.verma@example.com",
+      "userPhone": "+91 98712 33490",
+      "referralCode": "PRIYA-CONNECT20",
+      "referralLink": "http://localhost:5000/?ref=PRIYA-CONNECT20",
+      "tier": "Silver Partner",
+      "status": "Active",
+      "feePaid": 999,
+      "paidAt": "2026-10-25T10:15:00Z",
+      "txnId": "PAY_CARD_8819201944",
+      "totalEarned": 2250,
+      "walletBalance": 2250,
+      "totalWithdrawn": 0,
+      "upiId": "priya.verma@icici",
+      "referrals": [
+        {
+          "id": "ref-5",
+          "name": "Amit Kumar",
+          "type": "Candidate",
+          "skill": "HVAC Electrician",
+          "status": "Interview Scheduled",
+          "commission": 500,
+          "date": "2026-10-25"
+        },
+        {
+          "id": "ref-6",
+          "name": "Apex Logistics",
+          "type": "Employer",
+          "skill": "Warehouse Staffing",
+          "status": "Hiring Active",
+          "commission": 1750,
+          "date": "2026-10-25"
+        }
+      ]
+    },
+    {
+      "id": "aff-1792944182287",
+      "userId": "user-cand-3",
+      "userName": "Amit Kumar",
+      "userEmail": "amit.kumar@example.com",
+      "userPhone": "+91 98110 56781",
+      "referralCode": "AMITKU-239",
+      "referralLink": "http://localhost:5000/?ref=AMITKU-239",
+      "tier": "Silver Partner",
+      "status": "Active",
+      "feePaid": 999,
+      "paidAt": "2026-10-25T16:03:02.287Z",
+      "txnId": "TXN_UPI_QR_1792944182287",
+      "paymentMethod": "UPI QR",
+      "totalEarned": 0,
+      "walletBalance": 0,
+      "totalWithdrawn": 0,
+      "upiId": "amit.kumar@upi",
+      "referrals": []
+    }
+  ],
+  "payoutRequests": [
+    {
+      "id": "payout-1792944190886",
+      "affiliateId": "aff-101",
+      "userName": "Rahul Sharma",
+      "amount": 1000,
+      "upiId": "rahul.sharma@okhdfcbank",
+      "status": "Approved",
+      "requestedAt": "2026-10-25T16:03:10.886Z",
+      "processedAt": "2026-10-25T16:03:10.923Z",
+      "txnRef": "BANK_IMPS_9928103319"
+    },
+    {
+      "id": "payout-201",
+      "affiliateId": "aff-101",
+      "userName": "Rahul Sharma",
+      "amount": 2000,
+      "upiId": "rahul.sharma@okhdfcbank",
+      "status": "Approved",
+      "requestedAt": "2026-10-24T18:00:00Z",
+      "processedAt": "2026-10-25T08:30:00Z",
+      "txnRef": "BANK_IMPS_991823011"
+    },
+    {
+      "id": "payout-202",
+      "affiliateId": "aff-101",
+      "userName": "Rahul Sharma",
+      "amount": 1500,
+      "upiId": "rahul.sharma@okhdfcbank",
+      "status": "Pending",
+      "requestedAt": "2026-10-25T19:00:00Z",
+      "processedAt": null,
+      "txnRef": null
+    }
+  ]
+}
