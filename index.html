@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Naani Pickles™ | 100% Traditional Sun-Cured Heirloom Indian Pickles & Chutneys</title>
+    <meta name="description" content="Authentic Indian pickles sun-cured for 21 days in ceramic barnis with cold-pressed mustard oil and Grandma's 60-year-old heirloom recipes. No preservatives, zero vinegar." />
+    <link rel="icon" type="image/png" href="/logo.png" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Rozha+One&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Playfair Display"', 'Georgia', 'serif'],
+              cormorant: ['"Cormorant Garamond"', 'serif'],
+              sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+              hindi: ['"Rozha One"', 'serif'],
+            },
+            colors: {
+              brand: {
+                terracotta: '#DF905B',
+                burgundy: '#701B25',
+                burgundyHover: '#8F2024',
+                cream: '#F7F1DF',
+                forest: '#285331',
+                gold: '#D69A19',
+                blue: '#4C7897',
+              },
+              bg: {
+                main: '#FBF7EF',
+                secondary: '#F7F1DF',
+                header: '#FFFCF6',
+                card: '#FFFFFF',
+                footer: '#285331',
+              },
+              brandText: {
+                primary: '#701B25',
+                secondary: '#8F2024',
+                body: '#62564D',
+                muted: '#806F60',
+                light: '#FFF8E9',
+              },
+              border: {
+                subtle: '#E9DCC7',
+              },
+              badge: {
+                offer: '#E5AC28',
+                success: '#285331',
+              },
+              // Official Naani Brand System Mapping
+              naani: {
+                red: '#8F2024',          // Primary button / secondary heading
+                darkred: '#701B25',      // Deep burgundy primary heading
+                crimson: '#701B25',      // Deep burgundy
+                clay: '#DF905B',         // Terracotta Orange
+                claydark: '#701B25',     // Deep burgundy
+                turmeric: '#D69A19',     // Mustard Gold
+                turmericdark: '#D69A19', // Mustard Gold
+                mustard: '#D69A19',      // Mustard Gold
+                mustardlight: '#E5AC28', // Offer badge gold
+                cream: '#FBF7EF',        // Main website background
+                creamlight: '#FFFCF6',   // Header background
+                linen: '#F7F1DF',        // Secondary / Heritage Cream background
+                sand: '#E9DCC7',         // Subtle cream border
+                forest: '#285331',       // Forest Green footer & natural badge
+                gold: '#D69A19',         // Mustard Gold highlight
+                blue: '#4C7897',         // Vintage Blue decorative element
+                charcoal: '#62564D',     // Primary body text
+                muted: '#806F60',        // Muted text
+                light: '#FFF8E9',        // Light footer & contrast text
+              }
+            },
+            boxShadow: {
+              'warm': '0 10px 25px -5px rgba(112, 27, 37, 0.08), 0 8px 10px -6px rgba(112, 27, 37, 0.05)',
+              'luxury': '0 20px 40px -15px rgba(112, 27, 37, 0.12)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      :root {
+        /* Primary Brand Colours */
+        --brand-terracotta: #DF905B;
+        --brand-burgundy: #701B25;
+        --brand-burgundy-hover: #8F2024;
+        --brand-cream: #F7F1DF;
+        --brand-forest: #285331;
+        --brand-gold: #D69A19;
+        --brand-blue: #4C7897;
+
+        /* Website Backgrounds */
+        --bg-main: #FBF7EF;
+        --bg-secondary: #F7F1DF;
+        --bg-header: #FFFCF6;
+        --bg-card: #FFFFFF;
+        --bg-footer: #285331;
+
+        /* Typography */
+        --text-heading-primary: #701B25;
+        --text-heading-secondary: #8F2024;
+        --text-body: #62564D;
+        --text-muted: #806F60;
+        --text-light: #FFF8E9;
+
+        /* Buttons */
+        --btn-primary: #8F2024;
+        --btn-primary-hover: #701B25;
+        --btn-secondary-bg: #F7F1DF;
+        --btn-secondary-text: #701B25;
+        --btn-secondary-border: #D69A19;
+
+        /* Other UI Elements */
+        --border-subtle: #E9DCC7;
+        --badge-offer: #E5AC28;
+        --badge-success: #285331;
+        --accent-decorative: #4C7897;
+        --divider-footer: #49664A;
+      }
+
+      *, *::before, *::after {
+        box-sizing: border-box;
+      }
+      html, body {
+        max-width: 100vw;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background-color: #FBF7EF;
+        color: #62564D;
+      }
+
+      /* Guaranteed 2-Column Mobile Product Grid across ALL Devices */
+      .naani-product-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 8px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+      .naani-product-grid > * {
+        min-width: 0 !important;
+        max-width: 100% !important;
+      }
+      @media (min-width: 640px) {
+        .naani-product-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+          gap: 14px !important;
+        }
+      }
+      @media (min-width: 768px) {
+        .naani-product-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+          gap: 18px !important;
+        }
+      }
+      @media (min-width: 1024px) {
+        .naani-product-grid {
+          grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+          gap: 24px !important;
+        }
+      }
+      
+      .font-serif-luxury {
+        font-family: 'Playfair Display', Georgia, serif;
+      }
+      
+      .font-cormorant {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+      }
+
+      /* Heritage patterned background overlay */
+      .bg-rangoli-subtle {
+        background-color: #FBF7EF;
+        background-image: radial-gradient(#DF905B 0.75px, transparent 0.75px), radial-gradient(#D69A19 0.75px, #FBF7EF 0.75px);
+        background-size: 30px 30px;
+        background-position: 0 0, 15px 15px;
+        background-opacity: 0.03;
+      }
+
+      /* Custom scrollbars */
+      ::-webkit-scrollbar {
+        width: 7px;
+        height: 7px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #F7F1DF;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #D69A19;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #701B25;
+      }
+
+      @keyframes pulse-warm {
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.05); opacity: 0.9; }
+      }
+      .animate-pulse-warm {
+        animation: pulse-warm 2.5s infinite ease-in-out;
+      }
+    </style>
+  </head>
+  <body class="bg-[#FBF7EF] text-[#62564D] antialiased selection:bg-[#D69A19]/25 selection:text-[#701B25]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
